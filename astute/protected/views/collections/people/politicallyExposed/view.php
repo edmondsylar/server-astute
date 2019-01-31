@@ -94,7 +94,7 @@ $relationship_levels = TPersonrelationshipslevel::model()->findAll("status='A'")
                         <ul>
                             <li><a class="btn-floating indigo modal-trigger tooltipped "  href="#addemployment" data-position="top" data-delay="50" data-tooltip="Add Employment"><i class="material-icons">today</i></a></li>
                             <li><a class="btn-floating indigo modal-trigger tooltipped "  href="#add-dateofbirth" data-position="top" data-delay="50" data-tooltip="Add Date of Birth"><i class="material-icons">today</i></a></li>
-                            <li><a class="btn-floating indigo modal-trigger tooltipped "  href="<?php echo @Yii::app()->baseUrl; ?>/index.php?r=collections/people/politicallyExposed/searchperson&id=<?php echo $code->encode($person->id); ?>" data-position="top" data-delay="50" data-tooltip="Add Relationship"><i class="material-icons">people</i></a></li>
+                            <li><a class="btn-floating indigo modal-trigger tooltipped "  href="<?php echo @Yii::app()->baseUrl; ?>/index.php?r=collections/people/PoliticallyExposed/searchperson&id=<?php echo $code->encode($person->id); ?>" data-position="top" data-delay="50" data-tooltip="Add Relationship"><i class="material-icons">people</i></a></li>
                            <!--
                            <li><a class="btn-floating pink  tooltipped" href="#add-contact" data-position="top" data-delay="50" data-tooltip="Add Contact"><i class="material-icons">phone</i></a></li>
                             <li><a class="btn-floating purple  tooltipped" href="#add-proffesion" data-position="top" data-delay="50" data-tooltip="Add Proffession"><i class="material-icons">face</i></a></li>
@@ -541,7 +541,7 @@ $relationship_levels = TPersonrelationshipslevel::model()->findAll("status='A'")
                                                                             $nationalityvalue = TCountry::model()->findByAttributes(array('code' => $nid));
                                                                             $nationalityname = $nationalityvalue->name;
                                                                             ?>
-                                                                            <tr onclick="location.href = '<?php echo Yii::app()->baseUrl; ?>/index.php?r=collections/people/politicallyExposed/addnewemployment&id=<?php echo $code->encode($result->id); ?>&per=<?php echo $code->encode($personid); ?>'" >
+                                                                            <tr onclick="location.href = '<?php echo Yii::app()->baseUrl; ?>/index.php?r=collections/people/PoliticallyExposed/addnewemployment&id=<?php echo $code->encode($result->id); ?>&per=<?php echo $code->encode($personid); ?>'" >
                                                                                 <td><?php echo $t ?></td>
                                                                                 <td><?php echo $result->name; ?></td>
                                                                                 <td><?php echo $typename; ?></td>
