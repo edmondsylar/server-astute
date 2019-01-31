@@ -106,7 +106,7 @@ $countries = TCountry::model()->findAll("status='A'");
                                     <br><br>
                                     <div class="row s12 right" >
                                         <input type="hidden" name="newname" value="<?php echo $searched; ?>">
-                                                <input type="radio" id="Match" onclick="location.href='<?php echo @Yii::app()->baseUrl; ?>/index.php?r=collections/people/politicallyExposed/search'" name="result" class="with-gap">
+                                                <input type="radio" id="Match" onclick="location.href='<?php echo @Yii::app()->baseUrl; ?>/index.php?r=collections/people/PoliticallyExposed/search'" name="result" class="with-gap">
                                                 <label for="Match"> Match</label>&nbsp; &nbsp; &nbsp; &nbsp;
                                                 <input type="radio" id="No Match"  href="#add-person" name="result" class="with-gap modal-trigger">
                                                 <label for="No Match"> No Match</label>
