@@ -78,7 +78,7 @@ class PoliticallyExposedController extends Controller {
             } else {
                 //log error
             }
-            $this->redirect(array('collections/people/PoliticallyExposed'));
+            $this->redirect(array('collections/people/politicallyexposed'));
         }
         $this->render('search', array(
             'model' => $this->loadSearchResult($userid, $query),
@@ -116,7 +116,7 @@ class PoliticallyExposedController extends Controller {
             } else {
                 //log error
             }
-            $this->redirect(array('collections/people/PoliticallyExposed/view', 'id' => $id));
+            $this->redirect(array('collections/people/politicallyexposed/view', 'id' => $id));
         }
         //add image url
         if (isset($_POST['new-picture-url'])) {
@@ -147,7 +147,7 @@ class PoliticallyExposedController extends Controller {
             } else {
                 //log error
             }
-            $this->redirect(array('collections/people/PoliticallyExposed/view', 'id' => $id));
+            $this->redirect(array('collections/people/politicallyexposed/view', 'id' => $id));
         }
         // save image path to database
 //        if (isset($_POST['new-picture-url'])){
