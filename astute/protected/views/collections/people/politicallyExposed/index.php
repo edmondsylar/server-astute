@@ -28,7 +28,7 @@ $people1 = $model[0];
                                 </ul>
                             </div>
                             <div class="col s12 m6 l6 right-align" style="margin-top: 7px;">
-                                <input type="button" class=" waves-blue btn-flat" value="View Pending Positions" onclick="window.open('<?php echo @Yii::app()->baseUrl; ?>/index.php?r=collections/people/PoliticallyExposed/viewpendingwork', 'popup', 'height=400,width=1000,left=5,top=10,scrollbars=yes,menubar=no titlebar'); return false;"
+                                <input type="button" class=" waves-blue btn-flat" value="View Pending Positions" onclick="window.open('<?php echo @Yii::app()->baseUrl; ?>/index.php?r=collections/people/politicallyexposed/viewpendingwork', 'popup', 'height=400,width=1000,left=5,top=10,scrollbars=yes,menubar=no titlebar'); return false;"
                                        onmouseover="this.style.color = 'orange';"  onmouseout="this.style.color = '';">
                             </div>
                         </div>
