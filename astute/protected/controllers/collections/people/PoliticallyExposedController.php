@@ -78,7 +78,7 @@ class PoliticallyExposedController extends Controller {
             } else {
                 //log error
             }
-            $this->redirect(array('collections/people/politicallyExposed'));
+            $this->redirect(array('collections/people/PoliticallyExposed'));
         }
         $this->render('search', array(
             'model' => $this->loadSearchResult($userid, $query),
@@ -116,7 +116,7 @@ class PoliticallyExposedController extends Controller {
             } else {
                 //log error
             }
-            $this->redirect(array('collections/people/politicallyExposed/view', 'id' => $id));
+            $this->redirect(array('collections/people/PoliticallyExposed/view', 'id' => $id));
         }
         //add image url
         if (isset($_POST['new-picture-url'])) {
@@ -147,7 +147,7 @@ class PoliticallyExposedController extends Controller {
             } else {
                 //log error
             }
-            $this->redirect(array('collections/people/politicallyExposed/view', 'id' => $id));
+            $this->redirect(array('collections/people/PoliticallyExposed/view', 'id' => $id));
         }
         // save image path to database
 //        if (isset($_POST['new-picture-url'])){
@@ -177,7 +177,7 @@ class PoliticallyExposedController extends Controller {
             } else {
                 //log error
             }
-            $this->redirect(array('collections/people/politicallyExposed/view', 'id' => $id));
+            $this->redirect(array('collections/people/PoliticallyExposed/view', 'id' => $id));
         }
         //add website citation
         if (isset($_POST['new-title-citation'])) {
@@ -197,7 +197,7 @@ class PoliticallyExposedController extends Controller {
             } else {
                 //log error
             }
-            $this->redirect(array('collections/people/politicallyExposed/view', 'id' => $id));
+            $this->redirect(array('collections/people/PoliticallyExposed/view', 'id' => $id));
         }
         //edit website citation
         if (isset($_POST['edit-title-citation'])) {
@@ -215,7 +215,7 @@ class PoliticallyExposedController extends Controller {
             } else {
                 //log error
             }
-            $this->redirect(array('collections/people/politicallyExposed/view', 'id' => $id));
+            $this->redirect(array('collections/people/PoliticallyExposed/view', 'id' => $id));
         }
         //delete reference
         if (isset($_POST['reference_delete_id'])) {
@@ -227,7 +227,7 @@ class PoliticallyExposedController extends Controller {
             } else {
                 //log error
             }
-            $this->redirect(array('collections/people/politicallyExposed/view', 'id' => $id));
+            $this->redirect(array('collections/people/PoliticallyExposed/view', 'id' => $id));
         }
         //delete employment
         if (isset($_POST['employment_delete_id'])) {
@@ -239,7 +239,7 @@ class PoliticallyExposedController extends Controller {
             } else {
                 //log error
             }
-            $this->redirect(array('collections/people/politicallyExposed/view', 'id' => $id));
+            $this->redirect(array('collections/people/PoliticallyExposed/view', 'id' => $id));
         }
 //        searching for organisations to add employment
         if (isset($_POST['orgquery'])) {
@@ -287,7 +287,7 @@ class PoliticallyExposedController extends Controller {
                     //log error
                 }
             }
-            $this->redirect(array('collections/people/politicallyExposed'));
+            $this->redirect(array('collections/people/PoliticallyExposed'));
         }
         //add date of birth
         if (isset($_POST['dateofbirth'])) {
@@ -300,7 +300,7 @@ class PoliticallyExposedController extends Controller {
             } else {
                 //log error
             }
-            $this->redirect(array('collections/people/politicallyExposed/view', 'id' => $id));
+            $this->redirect(array('collections/people/PoliticallyExposed/view', 'id' => $id));
         }
         //edit date of birth
         if (isset($_POST['new_dateofbirth'])) {
@@ -312,7 +312,7 @@ class PoliticallyExposedController extends Controller {
             } else {
                 //log error
             }
-            $this->redirect(array('collections/people/politicallyExposed/view', 'id' => $id));
+            $this->redirect(array('collections/people/PoliticallyExposed/view', 'id' => $id));
         }
         //delete date of birth
         if (isset($_POST['delete_dateofbirth'])) {
@@ -324,7 +324,7 @@ class PoliticallyExposedController extends Controller {
             } else {
                 //log error
             }
-            $this->redirect(array('collections/people/politicallyExposed/view', 'id' => $id));
+            $this->redirect(array('collections/people/PoliticallyExposed/view', 'id' => $id));
         }
 
         //delete relationship
@@ -337,7 +337,7 @@ class PoliticallyExposedController extends Controller {
             } else {
                 //log error
             }
-            $this->redirect(array('collections/people/politicallyExposed/view', 'id' => $id));
+            $this->redirect(array('collections/people/PoliticallyExposed/view', 'id' => $id));
         }
 
         $this->render('view', array(
@@ -387,7 +387,7 @@ class PoliticallyExposedController extends Controller {
             } else {
                 //log error
             }
-            $this->redirect(array('collections/people/politicallyExposed/view', 'id' => $per));
+            $this->redirect(array('collections/people/PoliticallyExposed/view', 'id' => $per));
         }
 
         $this->render('addnewemployment', array(
@@ -477,7 +477,7 @@ class PoliticallyExposedController extends Controller {
             }
             //re encode the person id because the url uses encoded urls
             $this->redirect(array(
-                'collections/people/politicallyExposed/view','id' => $code->encode($person_id)
+                'collections/people/PoliticallyExposed/view','id' => $code->encode($person_id)
             ));
 
         }
@@ -498,7 +498,7 @@ class PoliticallyExposedController extends Controller {
                 //log error
             }
 
-            $this->redirect(array('collections/people/politicallyExposed'));
+            $this->redirect(array('collections/people/PoliticallyExposed'));
         }
 
         $this->render('searchperson', array(
