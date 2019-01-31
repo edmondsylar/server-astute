@@ -37,7 +37,7 @@ $countries = TCountry::model()->findAll("status='A'");
                                         <span class="black-text">People</span> &sol;
                                         <?php // echo CHtml::link('Panel', array('organisation/panel')); ?>
                                         <?php echo CHtml::link('All PEP', array('collections/people/politicallyExposed')); ?> &sol;
-                                        <a href="<?php echo Yii::app()->baseUrl; ?>/index.php?r=collections/people/politicallyExposed/view&id=<?php echo $code->encode($personid); ?>"><?php echo $name; ?></a> &sol;
+                                        <a href="<?php echo Yii::app()->baseUrl; ?>/index.php?r=collections/people/PoliticallyExposed/view&id=<?php echo $code->encode($personid); ?>"><?php echo $name; ?></a> &sol;
                                         <span>Search Person</span>
                                     </div>
                                 </h5>
