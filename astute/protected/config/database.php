@@ -7,9 +7,9 @@ return array(
 	
 //	'connectionString' => 'mysql:host=localhost;dbname=conkev_lists_v2',
 //	'connectionString' => 'mysql:host=192.168.8.5;dbname=astute-server',
-	'connectionString' => 'mysql:host=207.154.213.196;dbname=astute-server',
+	'connectionString' => 'mysql:host=localhost;dbname=development_sdn',
 	'emulatePrepare' => true,
-	'username' => 'client',
+	'username' => 'root',
 	'password' => '',
 //	'username' => 'root',
 //	'password' => 'root',
