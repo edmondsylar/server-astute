@@ -1,0 +1,844 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="a6579a53-62be-4533-925a-2ae68996155a" name="Default Changelist" comment="Done">
+      <change afterPath="$PROJECT_DIR$/protected/controllers/collections/organisation/FunctionsController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/protected/controllers/collections/organisation/OrganizationsController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/protected/views/people/politicallyExposed/modals/addRelationshipLevel.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/protected/views/people/politicallyExposed/modals/deleteRelationship.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/1b34dbfd/jquery.ba-bbq.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/1b34dbfd/jquery.ba-bbq.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/1b34dbfd/jquery.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/1b34dbfd/jquery.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/1b34dbfd/jquery.multifile.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/1b34dbfd/jquery.multifile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/7aa6077b/gridview/jquery.yiigridview.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/7aa6077b/gridview/jquery.yiigridview.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/81bb55b/jquery.ba-bbq.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/81bb55b/jquery.ba-bbq.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/81bb55b/jquery.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/81bb55b/jquery.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/81bb55b/jquery.multifile.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/81bb55b/jquery.multifile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/a71a330a/jquery.ba-bbq.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/a71a330a/jquery.ba-bbq.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/a71a330a/jquery.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/a71a330a/jquery.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/a71a330a/jquery.multifile.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/a71a330a/jquery.multifile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/b4e1afc6/jquery.ba-bbq.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/b4e1afc6/jquery.ba-bbq.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/b4e1afc6/jquery.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/b4e1afc6/jquery.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/b4e1afc6/jquery.multifile.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/b4e1afc6/jquery.multifile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/e43ed57a/jquery.ba-bbq.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/e43ed57a/jquery.ba-bbq.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/e43ed57a/jquery.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/e43ed57a/jquery.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/e43ed57a/jquery.multifile.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/e43ed57a/jquery.multifile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/plugins/codemirror/mode/sql/sql.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/plugins/codemirror/mode/sql/sql.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/plugins/codemirror/mode/stex/stex.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/plugins/codemirror/mode/stex/stex.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/plugins/datatables/js/jquery.dataTables.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/plugins/datatables/js/jquery.dataTables.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/plugins/fullcalendar/fullcalendar.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/plugins/fullcalendar/fullcalendar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/plugins/jquery-blockui/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/plugins/jquery-blockui/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/plugins/jquery-steps/jquery.steps.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/plugins/jquery-steps/jquery.steps.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/plugins/jquery-steps/jquery.steps.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/plugins/jquery-steps/jquery.steps.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/plugins/materialize/js/materialize.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/plugins/materialize/js/materialize.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/plugins/select2/js/select2.full.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/plugins/select2/js/select2.full.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/plugins/select2/js/select2.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/plugins/select2/js/select2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/conkevLists.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/error_log" beforeDir="false" afterPath="$PROJECT_DIR$/error_log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/framework/caching/CDbCache.php" beforeDir="false" afterPath="$PROJECT_DIR$/framework/caching/CDbCache.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/framework/caching/CFileCache.php" beforeDir="false" afterPath="$PROJECT_DIR$/framework/caching/CFileCache.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/framework/collections/CAttributeCollection.php" beforeDir="false" afterPath="$PROJECT_DIR$/framework/collections/CAttributeCollection.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/framework/collections/CList.php" beforeDir="false" afterPath="$PROJECT_DIR$/framework/collections/CList.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/framework/collections/CMap.php" beforeDir="false" afterPath="$PROJECT_DIR$/framework/collections/CMap.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/framework/db/ar/CActiveRecord.php" beforeDir="false" afterPath="$PROJECT_DIR$/framework/db/ar/CActiveRecord.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/framework/vendors/htmlpurifier/HTMLPurifier.standalone.php" beforeDir="false" afterPath="$PROJECT_DIR$/framework/vendors/htmlpurifier/HTMLPurifier.standalone.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/framework/web/CDbHttpSession.php" beforeDir="false" afterPath="$PROJECT_DIR$/framework/web/CDbHttpSession.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/framework/web/CHttpRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/framework/web/CHttpRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/framework/web/CHttpSession.php" beforeDir="false" afterPath="$PROJECT_DIR$/framework/web/CHttpSession.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/framework/web/CThemeManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/framework/web/CThemeManager.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/framework/web/CUrlManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/framework/web/CUrlManager.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/framework/web/CWebApplication.php" beforeDir="false" afterPath="$PROJECT_DIR$/framework/web/CWebApplication.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/framework/web/auth/CAccessControlFilter.php" beforeDir="false" afterPath="$PROJECT_DIR$/framework/web/auth/CAccessControlFilter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/framework/web/form/CForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/framework/web/form/CForm.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/framework/web/form/CFormElementCollection.php" beforeDir="false" afterPath="$PROJECT_DIR$/framework/web/form/CFormElementCollection.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/framework/web/helpers/CHtml.php" beforeDir="false" afterPath="$PROJECT_DIR$/framework/web/helpers/CHtml.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/framework/web/js/source/jquery.ba-bbq.js" beforeDir="false" afterPath="$PROJECT_DIR$/framework/web/js/source/jquery.ba-bbq.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/framework/web/js/source/jquery.js" beforeDir="false" afterPath="$PROJECT_DIR$/framework/web/js/source/jquery.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/framework/web/js/source/jquery.multifile.js" beforeDir="false" afterPath="$PROJECT_DIR$/framework/web/js/source/jquery.multifile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/framework/zii/widgets/assets/gridview/jquery.yiigridview.js" beforeDir="false" afterPath="$PROJECT_DIR$/framework/zii/widgets/assets/gridview/jquery.yiigridview.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nbproject/private/private.properties" beforeDir="false" afterPath="$PROJECT_DIR$/nbproject/private/private.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nbproject/private/private.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nbproject/project.properties" beforeDir="false" afterPath="$PROJECT_DIR$/nbproject/project.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nbproject/project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/nbproject/project.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/protected/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/protected/config/database.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/protected/config/main.php" beforeDir="false" afterPath="$PROJECT_DIR$/protected/config/main.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/protected/controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/protected/controllers/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/protected/controllers/organisation/FunctionsController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/protected/controllers/organisation/OrganizationsController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/protected/controllers/organisation/PanelController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/protected/controllers/organisation/PositionsController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/protected/controllers/people/PanelController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/protected/controllers/people/PoliticallyExposedController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/protected/controllers/settings/PanelController.php" beforeDir="false" afterPath="$PROJECT_DIR$/protected/controllers/settings/PanelController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/protected/models/TPerson.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/protected/models/TPersonPhoto.php" beforeDir="false" afterPath="$PROJECT_DIR$/protected/models/TPersonPhotoUrl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/protected/runtime/application.log" beforeDir="false" afterPath="$PROJECT_DIR$/protected/runtime/application.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/protected/views/layouts/footerMain.php" beforeDir="false" afterPath="$PROJECT_DIR$/protected/views/layouts/footerMain.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/protected/views/layouts/main.php" beforeDir="false" afterPath="$PROJECT_DIR$/protected/views/layouts/main.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/protected/views/layouts/menuLeft.php" beforeDir="false" afterPath="$PROJECT_DIR$/protected/views/layouts/menuLeft.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/protected/views/organisation/organizations/addfunction.php" beforeDir="false" afterPath="$PROJECT_DIR$/protected/views/organisation/organizations/addfunction.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/protected/views/organisation/organizations/modals/assignposition.php" beforeDir="false" afterPath="$PROJECT_DIR$/protected/views/organisation/organizations/modals/assignposition.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/protected/views/people/politicallyExposed/modals/addPictureUrl.php" beforeDir="false" afterPath="$PROJECT_DIR$/protected/views/people/politicallyExposed/modals/addPictureUrl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/protected/views/people/politicallyExposed/modals/editdateofBirth.php" beforeDir="false" afterPath="$PROJECT_DIR$/protected/views/people/politicallyExposed/modals/editdateofBirth.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/protected/views/people/politicallyExposed/searchperson.php" beforeDir="false" afterPath="$PROJECT_DIR$/protected/views/people/politicallyExposed/searchperson.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/protected/views/people/politicallyExposed/view.php" beforeDir="false" afterPath="$PROJECT_DIR$/protected/views/people/politicallyExposed/view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/protected/views/settings/panel/adversemediaprogram.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/protected/views/settings/panel/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/protected/views/settings/panel/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/protected/views/settings/panel/modals/adversemediastatus.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/protected/views/settings/panel/modals/createadverseprogram.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/protected/views/settings/panel/modals/createrelationship.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/protected/views/settings/panel/modals/deleteprogram.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/protected/views/settings/panel/modals/deleterelationship.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/protected/views/settings/panel/modals/editprogram.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/protected/views/settings/panel/modals/editrelationship.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/protected/views/settings/panel/modals/relationshipstatus.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/protected/views/settings/panel/relationshipdefinition.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/protected/views/settings/panel/searchprogram.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/protected/views/user/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/protected/views/user/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/protected/views/user/panel.php" beforeDir="false" afterPath="$PROJECT_DIR$/protected/views/user/panel.php" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/protected/controllers/collections/people/PoliticallyExposedController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="816">
+              <caret line="48" column="16" selection-start-line="48" selection-start-column="16" selection-end-line="48" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/protected/config/database.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="72" selection-start-line="8" selection-start-column="72" selection-end-line="8" selection-end-column="72" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/protected/views/collections/people/politicallyExposed/modals/addPictureUrl.php">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/protected/views/collections/people/politicallyExposed/view.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="442">
+              <caret line="38" column="47" lean-forward="true" selection-start-line="38" selection-start-column="41" selection-end-line="38" selection-end-column="51" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>returnUrl</find>
+      <find>route</find>
+      <find>caseSensitive</find>
+      <find>controllerID</find>
+      <find>ca</find>
+      <find>registration</find>
+      <find>search</find>
+      <find>t_intelligenceHide</find>
+      <find>person_id</find>
+      <find>name</find>
+      <find>personu</find>
+      <find>relationship</find>
+      <find>relationship_definition</find>
+      <find>homeurl</find>
+      <find>homeUrl</find>
+      <find>submit_records</find>
+      <find>$organization_id</find>
+      <find>$organization_id</find>
+      <find>personid</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/protected/views/collections/panel/modals/addOrganizationCitationWebsite.php" />
+        <option value="$PROJECT_DIR$/protected/views/collections/panel/vieworganization.php" />
+        <option value="$PROJECT_DIR$/protected/views/collections/panel/people/politicallyExposed/view.php" />
+        <option value="$PROJECT_DIR$/protected/views/collections/panel/people/politicallyExposed/people.php" />
+        <option value="$PROJECT_DIR$/protected/views/collections/panel/organizations/organization.php" />
+        <option value="$PROJECT_DIR$/protected/views/collections/panel/organisation/organizations/searchorganization.php" />
+        <option value="$PROJECT_DIR$/protected/views/collections/panel/organisation/organizations/organization.php" />
+        <option value="$PROJECT_DIR$/protected/views/collections/panel/organisation/organizations/searchorganisation.php" />
+        <option value="$PROJECT_DIR$/protected/controllers/collections/PanelController.php" />
+        <option value="$PROJECT_DIR$/protected/views/organisation/organizations/modals/assignposition.php" />
+        <option value="$PROJECT_DIR$/protected/views/collections/panel/organisation/organizations/modals/editfunction.php" />
+        <option value="$PROJECT_DIR$/protected/views/collections/people/panel/index.php" />
+        <option value="$PROJECT_DIR$/protected/controllers/collections/PoliticallyExposedController.php" />
+        <option value="$PROJECT_DIR$/protected/config/main.php" />
+        <option value="$PROJECT_DIR$/protected/views/layouts/footerMain.php" />
+        <option value="$PROJECT_DIR$/protected/views/layouts/main.php" />
+        <option value="$PROJECT_DIR$/protected/views/collections/people/politicallyExposed/search.php" />
+        <option value="$PROJECT_DIR$/protected/views/collections/people/politicallyExposed/modals/assignrelationship.php" />
+        <option value="$PROJECT_DIR$/protected/views/collections/people/politicallyExposed/addnewemployment.php" />
+        <option value="$PROJECT_DIR$/protected/views/collections/people/politicallyExposed/assignrelationship.php" />
+        <option value="$PROJECT_DIR$/protected/controllers/collections/organisation/OrganizationsController.php" />
+        <option value="$PROJECT_DIR$/protected/controllers/collections/organisation/PositionsController.php" />
+        <option value="$PROJECT_DIR$/protected/controllers/collections/organisation/FunctionsController.php" />
+        <option value="$PROJECT_DIR$/protected/views/collections/organisation/functions/index.php" />
+        <option value="$PROJECT_DIR$/protected/views/collections/organisation/functions/search.php" />
+        <option value="$PROJECT_DIR$/protected/views/collections/organisation/organizations/addfunction.php" />
+        <option value="$PROJECT_DIR$/protected/views/collections/organisation/organizations/addposition.php" />
+        <option value="$PROJECT_DIR$/protected/views/collections/organisation/organizations/search.php" />
+        <option value="$PROJECT_DIR$/protected/views/collections/organisation/organizations/searchfunction.php" />
+        <option value="$PROJECT_DIR$/protected/views/collections/organisation/organizations/searchposition.php" />
+        <option value="$PROJECT_DIR$/protected/views/collections/organisation/positions/index.php" />
+        <option value="$PROJECT_DIR$/protected/views/collections/organisation/positions/search.php" />
+        <option value="$PROJECT_DIR$/protected/views/collections/organisation/organizations/index.php" />
+        <option value="$PROJECT_DIR$/protected/views/licences/licencesClient/modals/addTerms.php" />
+        <option value="$PROJECT_DIR$/protected/views/licences/licencesClient/view.php" />
+        <option value="$PROJECT_DIR$/protected/views/user/login.php" />
+        <option value="$PROJECT_DIR$/protected/views/collections/people/politicallyExposed/view.php" />
+        <option value="$PROJECT_DIR$/protected/views/layouts/menuUser.php" />
+        <option value="$PROJECT_DIR$/protected/views/layouts/menuLeft.php" />
+        <option value="$PROJECT_DIR$/protected/views/collections/people/politicallyExposed/searchperson.php" />
+        <option value="$PROJECT_DIR$/protected/views/collections/people/politicallyExposed/modals/assignposition.php" />
+        <option value="$PROJECT_DIR$/protected/views/collections/organisation/organizations/view.php" />
+        <option value="$PROJECT_DIR$/protected/views/collections/organisation/organizations/modals/assignfunction.php" />
+        <option value="$PROJECT_DIR$/protected/views/licences/licencesClient/modals/addClient.php" />
+        <option value="$PROJECT_DIR$/protected/controllers/licences/LicencesClientController.php" />
+        <option value="$PROJECT_DIR$/protected/views/user/panel.php" />
+        <option value="$PROJECT_DIR$/protected/config/database.php" />
+        <option value="$PROJECT_DIR$/protected/controllers/people/PoliticallyExposedController.php" />
+        <option value="$PROJECT_DIR$/protected/views/collections/people/politicallyExposed/index.php" />
+        <option value="$PROJECT_DIR$/protected/controllers/collections/people/PoliticallyExposedController.php" />
+        <option value="$PROJECT_DIR$/protected/views/collections/panel/index.php" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="astute" type="b2602c69:ProjectViewProjectNode" />
+              <item name="astute" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="astute" type="b2602c69:ProjectViewProjectNode" />
+              <item name="astute" type="462c0819:PsiDirectoryNode" />
+              <item name="protected" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="astute" type="b2602c69:ProjectViewProjectNode" />
+              <item name="astute" type="462c0819:PsiDirectoryNode" />
+              <item name="protected" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="astute" type="b2602c69:ProjectViewProjectNode" />
+              <item name="astute" type="462c0819:PsiDirectoryNode" />
+              <item name="protected" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="astute" type="b2602c69:ProjectViewProjectNode" />
+              <item name="astute" type="462c0819:PsiDirectoryNode" />
+              <item name="protected" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="astute" type="b2602c69:ProjectViewProjectNode" />
+              <item name="astute" type="462c0819:PsiDirectoryNode" />
+              <item name="protected" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+              <item name="collections" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="astute" type="b2602c69:ProjectViewProjectNode" />
+              <item name="astute" type="462c0819:PsiDirectoryNode" />
+              <item name="protected" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+              <item name="collections" type="462c0819:PsiDirectoryNode" />
+              <item name="people" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="astute" type="b2602c69:ProjectViewProjectNode" />
+              <item name="astute" type="462c0819:PsiDirectoryNode" />
+              <item name="protected" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+              <item name="licences" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="astute" type="b2602c69:ProjectViewProjectNode" />
+              <item name="astute" type="462c0819:PsiDirectoryNode" />
+              <item name="protected" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="astute" type="b2602c69:ProjectViewProjectNode" />
+              <item name="astute" type="462c0819:PsiDirectoryNode" />
+              <item name="protected" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="astute" type="b2602c69:ProjectViewProjectNode" />
+              <item name="astute" type="462c0819:PsiDirectoryNode" />
+              <item name="protected" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="collections" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="astute" type="b2602c69:ProjectViewProjectNode" />
+              <item name="astute" type="462c0819:PsiDirectoryNode" />
+              <item name="protected" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="collections" type="462c0819:PsiDirectoryNode" />
+              <item name="panel" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="astute" type="b2602c69:ProjectViewProjectNode" />
+              <item name="astute" type="462c0819:PsiDirectoryNode" />
+              <item name="protected" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="collections" type="462c0819:PsiDirectoryNode" />
+              <item name="people" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="astute" type="b2602c69:ProjectViewProjectNode" />
+              <item name="astute" type="462c0819:PsiDirectoryNode" />
+              <item name="protected" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="collections" type="462c0819:PsiDirectoryNode" />
+              <item name="people" type="462c0819:PsiDirectoryNode" />
+              <item name="politicallyExposed" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="astute" type="b2602c69:ProjectViewProjectNode" />
+              <item name="astute" type="462c0819:PsiDirectoryNode" />
+              <item name="protected" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="collections" type="462c0819:PsiDirectoryNode" />
+              <item name="people" type="462c0819:PsiDirectoryNode" />
+              <item name="politicallyExposed" type="462c0819:PsiDirectoryNode" />
+              <item name="modals" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="astute" type="b2602c69:ProjectViewProjectNode" />
+              <item name="astute" type="462c0819:PsiDirectoryNode" />
+              <item name="protected" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="licences" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="astute" type="b2602c69:ProjectViewProjectNode" />
+              <item name="astute" type="462c0819:PsiDirectoryNode" />
+              <item name="protected" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="licences" type="462c0819:PsiDirectoryNode" />
+              <item name="licencesClient" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="astute" type="b2602c69:ProjectViewProjectNode" />
+              <item name="astute" type="462c0819:PsiDirectoryNode" />
+              <item name="protected" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="licences" type="462c0819:PsiDirectoryNode" />
+              <item name="licencesClient" type="462c0819:PsiDirectoryNode" />
+              <item name="modals" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="astute" type="b2602c69:ProjectViewProjectNode" />
+              <item name="astute" type="462c0819:PsiDirectoryNode" />
+              <item name="protected" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="SearchEverywhereHistoryKey" value="baseurl&#9;null&#9;null&#10;webapp&#9;FILE&#9;file://C:/xampp/htdocs/astute/framework/cli/commands/WebAppCommand.php&#10;user/login&#9;FILE&#9;file://C:/xampp/htdocs/astute/protected/views/user/login_1.php&#10;user/panel&#9;null&#9;null&#10;homeurl&#9;null&#9;null&#10;homeUrl&#9;null&#9;null" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../website" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\astute\protected\views\collections\people\politicallyExposed" />
+      <recent name="C:\xampp\htdocs\astute\protected\views\collections\panel" />
+      <recent name="C:\xampp\htdocs\astute\protected\controllers\collections" />
+      <recent name="C:\xampp\htdocs\astute\protected\views\collections\panel\people" />
+      <recent name="C:\xampp\htdocs\astute\protected\views\collections\panel\organisation" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\astute\protected\controllers\collections\organisation" />
+      <recent name="C:\xampp\htdocs\astute\protected\controllers\collections\people" />
+      <recent name="C:\xampp\htdocs\astute\protected\views\collections" />
+      <recent name="C:\xampp\htdocs\astute\protected\views\collections\panel\organisation" />
+      <recent name="C:\xampp\htdocs\astute\protected\views\collections\panel\modals" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a6579a53-62be-4533-925a-2ae68996155a" name="Default Changelist" comment="" />
+      <created>1535439802654</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1535439802654</updated>
+      <workItem from="1535439805357" duration="13550000" />
+      <workItem from="1535520539577" duration="17000000" />
+      <workItem from="1535605982359" duration="10808000" />
+      <workItem from="1535631663324" duration="3663000" />
+      <workItem from="1535952071687" duration="4708000" />
+      <workItem from="1535975686160" duration="1912000" />
+      <workItem from="1536042112360" duration="10169000" />
+      <workItem from="1536127298676" duration="8733000" />
+      <workItem from="1536138799647" duration="1993000" />
+      <workItem from="1536144355636" duration="4732000" />
+      <workItem from="1536226309055" duration="5796000" />
+      <workItem from="1536299095858" duration="1104000" />
+      <workItem from="1536314898669" duration="3620000" />
+      <workItem from="1536578717296" duration="8441000" />
+      <workItem from="1536644243739" duration="948000" />
+      <workItem from="1536645837854" duration="18051000" />
+      <workItem from="1536730618588" duration="17645000" />
+      <workItem from="1536816346182" duration="23449000" />
+      <workItem from="1537179242313" duration="1580000" />
+      <workItem from="1537245505253" duration="5722000" />
+      <workItem from="1537270821358" duration="12851000" />
+      <workItem from="1537351723375" duration="20129000" />
+      <workItem from="1537514368196" duration="12975000" />
+      <workItem from="1537772412802" duration="8747000" />
+      <workItem from="1538027446463" duration="1260000" />
+      <workItem from="1538392736203" duration="726000" />
+      <workItem from="1538463066962" duration="67000" />
+      <workItem from="1538463270049" duration="569000" />
+      <workItem from="1538473530316" duration="1186000" />
+      <workItem from="1538554431995" duration="90000" />
+      <workItem from="1538554585921" duration="2111000" />
+      <workItem from="1538633696618" duration="625000" />
+      <workItem from="1539155734968" duration="1779000" />
+      <workItem from="1539325384046" duration="9000" />
+      <workItem from="1539325450816" duration="1459000" />
+      <workItem from="1539328433819" duration="4000" />
+      <workItem from="1539328496019" duration="363000" />
+      <workItem from="1539328902607" duration="4000" />
+      <workItem from="1539328956850" duration="223000" />
+      <workItem from="1539349207009" duration="697000" />
+      <workItem from="1542620393331" duration="162000" />
+      <workItem from="1543229555521" duration="2080000" />
+      <workItem from="1543240238533" duration="566000" />
+      <workItem from="1543295986885" duration="18598000" />
+      <workItem from="1543382467336" duration="24250000" />
+      <workItem from="1543469691416" duration="34388000" />
+      <workItem from="1543826119534" duration="19119000" />
+      <workItem from="1543903931362" duration="9410000" />
+      <workItem from="1543987561935" duration="4001000" />
+      <workItem from="1544158766219" duration="182369000" />
+      <workItem from="1545729020881" duration="9930000" />
+      <workItem from="1545886523329" duration="2652000" />
+      <workItem from="1545922893102" duration="427000" />
+      <workItem from="1546071055944" duration="21926000" />
+      <workItem from="1546523250343" duration="8178000" />
+      <workItem from="1546675383280" duration="43000" />
+      <workItem from="1546679256072" duration="4455000" />
+      <workItem from="1546783658705" duration="93975000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="671224000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25416037" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3295082" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49924356" weight="0.5704918" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50075644" side_tool="true" weight="0.5704918" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
+    </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25416037" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3295082" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49924356" weight="0.5704918" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50075644" side_tool="true" weight="0.5704918" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Done" />
+    <option name="LAST_COMMIT_MESSAGE" value="Done" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/protected/views/settings/panel/view.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/settings/panel/searchintelligence.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1377" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/settings/panel/intelligence.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1426" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/collections/people/politicallyExposed/modals/editPerson.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-134">
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/collections/people/politicallyExposed/modals/addCitationWebsite.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/collections/people/politicallyExposed/addnewemployment.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2652" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/collections/people/politicallyExposed/modals/assignrelationship.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/collections/people/politicallyExposed/search.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1479" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/collections/people/politicallyExposed/searchperson.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="427">
+          <caret line="27" column="44" lean-forward="true" selection-start-line="27" selection-start-column="44" selection-end-line="27" selection-end-column="44" />
+          <folding>
+            <element signature="n#style#0;n#li#0;n#ul#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/collections/people/politicallyExposed/modals/assignposition.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="13" column="85" lean-forward="true" selection-start-line="13" selection-start-column="85" selection-end-line="13" selection-end-column="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/collections/organisation/organizations/index.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/collections/organisation/organizations/modals/assignposition.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/collections/people/politicallyExposed/modals/submitRecords.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h4#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/collections/organisation/organizations/addposition.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="99" column="110" selection-start-line="99" selection-start-column="95" selection-end-line="99" selection-end-column="121" />
+          <folding>
+            <element signature="e#6965#6977#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/collections/organisation/organizations/modals/assignfunction.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="10" column="79" selection-start-line="10" selection-start-column="79" selection-end-line="10" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/controllers/collections/organisation/OrganizationsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1141">
+          <caret line="195" column="57" selection-start-line="195" selection-start-column="57" selection-end-line="195" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/components/customClass/Encryption.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/components/customClass/JSON.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-250" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/components/customClass/CsvForm1.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/components/customClass/CsvFormm.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-117" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/framework/web/CHttpSession.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2805" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/config/console.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/config/test.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/config/main.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="46" selection-start-line="10" selection-start-column="46" selection-end-line="10" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/models/TUser.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1273" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/controllers/settings/PanelController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1258">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/controllers/UserController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1644">
+          <caret line="76" column="4" lean-forward="true" selection-start-line="76" selection-start-column="4" selection-end-line="76" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/controllers/UserTypeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-100" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/controllers/ConnectionsController.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/components/WebUser.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/components/UserIdentity.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="23" column="18" lean-forward="true" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="19" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/components/Controller.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/models/LoginForm.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/licences/licencesClient/modals/addClient.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="31" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/licences/licencesClient/search.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-442">
+          <caret line="79" column="52" lean-forward="true" selection-start-line="79" selection-start-column="32" selection-end-line="79" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/licences/licencesClient/view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1224" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/models/TSdnEntry.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1377" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/controllers/licences/LicencesClientController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="566">
+          <caret line="135" column="75" selection-start-line="135" selection-start-column="54" selection-end-line="135" selection-end-column="87" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/user/panel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2103">
+          <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/collections/organisation/organizations/view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="94" column="123" lean-forward="true" selection-start-line="94" selection-start-column="123" selection-end-line="94" selection-end-column="123" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/collections/people/politicallyExposed/modals/adddateofBirth.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="40" selection-start-line="4" selection-start-column="40" selection-end-line="4" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/collections/people/politicallyExposed/modals/addPerson.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-318" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/models/TPerson.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1020" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/config/database.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="72" selection-start-line="8" selection-start-column="72" selection-end-line="8" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/controllers/collections/PanelController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-355" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/controllers/people/PoliticallyExposedController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="51" column="27" selection-start-line="51" selection-start-column="27" selection-end-line="51" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/collections/panel/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="833">
+          <caret line="49" column="296" lean-forward="true" selection-start-line="49" selection-start-column="296" selection-end-line="49" selection-end-column="296" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/collections/people/politicallyExposed/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1117">
+          <caret line="25" column="207" selection-start-line="25" selection-start-column="207" selection-end-line="25" selection-end-column="207" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/collections/people/politicallyExposed/modals/addPictureUrl.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/controllers/collections/people/PoliticallyExposedController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="816">
+          <caret line="48" column="16" selection-start-line="48" selection-start-column="16" selection-end-line="48" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/collections/people/politicallyExposed/view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="38" column="47" lean-forward="true" selection-start-line="38" selection-start-column="41" selection-end-line="38" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
