@@ -28,7 +28,7 @@ $people1 = $model[0];
                                 </ul>
                             </div>
                             <div class="col s12 m6 l6 right-align" style="margin-top: 7px;">
-                                <input type="button" class=" waves-blue btn-flat" value="View Pending Positions" onclick="window.open('<?php echo @Yii::app()->baseUrl; ?>/index.php?r=collections/people/politicallyexposed/viewpendingwork', 'popup', 'height=400,width=1000,left=5,top=10,scrollbars=yes,menubar=no titlebar'); return false;"
+                                <input type="button" class=" waves-blue btn-flat" value="View Pending Positions" onclick="window.open('<?php echo @Yii::app()->baseUrl; ?>/index.php?r=collections/people/politicallyExposed/viewpendingwork', 'popup', 'height=400,width=1000,left=5,top=10,scrollbars=yes,menubar=no titlebar'); return false;"
                                        onmouseover="this.style.color = 'orange';"  onmouseout="this.style.color = '';">
                             </div>
                         </div>
@@ -46,7 +46,7 @@ $people1 = $model[0];
 
                 <div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
                     <!--href="#add-organization"-->
-                    <a class="btn-floating btn-large red waves-effect tooltipped "  href="<?php echo @Yii::app()->baseUrl; ?>/index.php?r=collections/people/PoliticallyExposed/search" data-position="left" data-delay="50" data-tooltip="Create New Person" >
+                    <a class="btn-floating btn-large red waves-effect tooltipped "  href="<?php echo @Yii::app()->baseUrl; ?>/index.php?r=collections/people/politicallyExposed/search" data-position="left" data-delay="50" data-tooltip="Create New Person" >
                         <i class="large material-icons">add</i>
                     </a>
                 </div> 
@@ -92,7 +92,7 @@ $people1 = $model[0];
                                         $nationalityname = $nationalityvalue->name;
                                         ?>
 
-                                        <tr onclick="location.href = '<?php echo Yii::app()->baseUrl; ?>/index.php?r=collections/people/PoliticallyExposed/view&id=<?php echo $code->encode($record->person_id); ?>'">
+                                        <tr onclick="location.href = '<?php echo Yii::app()->baseUrl; ?>/index.php?r=collections/people/politicallyExposed/view&id=<?php echo $code->encode($record->person_id); ?>'">
                                             <td><?php echo $r; ?>.</td>
                                             <td><?php echo $record->name; ?></td>
                                             <td><?php echo $gendername; ?></td>
