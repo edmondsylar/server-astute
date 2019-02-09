@@ -159,7 +159,7 @@ class CUrlManager extends CApplicationComponent
 	 * ({@link CController::actions}). Also, the directory names for organizing controllers should
 	 * be in lower case.
 	 */
-	public $caseSensitive=false;
+	public $caseSensitive=true;
 	/**
 	 * @var boolean whether the GET parameter values should match the corresponding
 	 * sub-patterns in a rule before using it to create a URL. Defaults to false, meaning

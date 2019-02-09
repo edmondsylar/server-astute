@@ -1,6 +1,6 @@
 <?php
 $code = new Encryption;
-$people = $model[0];
+$people1 = $model[0];
 ?>
 <div class="search-header">
     <div class="card card-transparent no-m">
@@ -23,12 +23,12 @@ $people = $model[0];
                             <div class="col s12 m6 16 search-stats">                                
                                 <ul class="tabs">
                                     <li class="tab col s10" style="text-align: left">
-                                        <span class="grey-text" style="font-size: 14px;">Politically Exposed People</span>&nbsp;&nbsp;<span class="red circle white-text">&nbsp;&nbsp;<?php echo count($people); ?>&nbsp;&nbsp;</span>
+                                        <span class="grey-text" style="font-size: 14px;">Politically Exposed People</span>&nbsp;&nbsp;<span class="red circle white-text">&nbsp;&nbsp;<?php echo count($people1); ?>&nbsp;&nbsp;</span>
                                     </li>  
                                 </ul>
                             </div>
                             <div class="col s12 m6 l6 right-align" style="margin-top: 7px;">
-                                <input type="button" class=" waves-blue btn-flat" value="View Pending Positions" onclick="window.open('<?php echo @Yii::app()->baseUrl; ?>/index.php?r=collections/people/politicallyExposed/viewpendingwork', 'popup', 'height=400,width=1000,left=5,top=10,scrollbars=yes,menubar=no titlebar'); return false;"
+                                <input type="button" class=" waves-blue btn-flat" value="View Pending Positions" onclick="window.open('<?php echo @Yii::app()->baseUrl; ?>/index.php?r=collections/people/PoliticallyExposed/viewpendingwork', 'popup', 'height=400,width=1000,left=5,top=10,scrollbars=yes,menubar=no titlebar'); return false;"
                                        onmouseover="this.style.color = 'orange';"  onmouseout="this.style.color = '';">
                             </div>
                         </div>
@@ -46,7 +46,7 @@ $people = $model[0];
 
                 <div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
                     <!--href="#add-organization"-->
-                    <a class="btn-floating btn-large red waves-effect tooltipped "  href="<?php echo @Yii::app()->baseUrl; ?>/index.php?r=collections/people/politicallyExposed/search" data-position="left" data-delay="50" data-tooltip="Create New Person" >
+                    <a class="btn-floating btn-large red waves-effect tooltipped "  href="<?php echo @Yii::app()->baseUrl; ?>/index.php?r=collections/people/PoliticallyExposed/search" data-position="left" data-delay="50" data-tooltip="Create New Person" >
                         <i class="large material-icons">add</i>
                     </a>
                 </div> 
@@ -66,9 +66,9 @@ $people = $model[0];
                             <tfoot><tr></br></tr></tfoot>
                             <tbody>
                                 <?php
-                                if (!empty($people)) {
+                                if (!empty($people1)) {
                                     $r = 1;
-                                    foreach ($people as $record) {
+                                    foreach ($people1 as $record) {
                                         switch ($record->status) {
                                             case 'A': $status = 'Active';
                                                 $btn = 'Active';
@@ -92,7 +92,7 @@ $people = $model[0];
                                         $nationalityname = $nationalityvalue->name;
                                         ?>
 
-                                        <tr onclick="location.href = '<?php echo Yii::app()->baseUrl; ?>/index.php?r=collections/people/politicallyExposed/view&id=<?php echo $code->encode($record->person_id); ?>'">
+                                        <tr onclick="location.href = '<?php echo Yii::app()->baseUrl; ?>/index.php?r=collections/people/PoliticallyExposed/view&id=<?php echo $code->encode($record->person_id); ?>'">
                                             <td><?php echo $r; ?>.</td>
                                             <td><?php echo $record->name; ?></td>
                                             <td><?php echo $gendername; ?></td>
