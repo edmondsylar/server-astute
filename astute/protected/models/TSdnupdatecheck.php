@@ -1,27 +1,21 @@
 <?php
 
 /**
- * This is the model class for table "t_person_employment".
+ * This is the model class for table "t_sdnupdatecheck".
  *
- * The followings are the available columns in table 't_person_employment':
- * @property integer $id
- * @property string $person
- * @property integer $organization
- * @property integer $person_position
- * @property integer $person_function
- * @property string $date_created
- * @property string $status
- * @property string $maker
- * @property string $supervisor
+ * The followings are the available columns in table 't_sdnupdatecheck':
+ * @property string $sdnUpdateCheckUid
+ * @property string $sdnUpdateCheckDate
+ * @property string $sdnPublishDate
  */
-class TPersonEmployment extends CActiveRecord
+class TSdnupdatecheck extends CActiveRecord
 {
 	/**
 	 * @return string the associated database table name
 	 */
 	public function tableName()
 	{
-		return 't_person_employment';
+		return 't_sdnupdatecheck';
 	}
 
 	/**
@@ -32,14 +26,12 @@ class TPersonEmployment extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('person, organization, person_position, person_function, date_created, maker', 'required'),
-			array('organization, person_position, person_function', 'numerical', 'integerOnly'=>true),
-			array('person', 'length', 'max'=>255),
-			array('status', 'length', 'max'=>1),
-			array('maker, supervisor', 'length', 'max'=>15),
+			array('sdnUpdateCheckUid, sdnUpdateCheckDate, sdnPublishDate', 'required'),
+			array('sdnUpdateCheckUid', 'length', 'max'=>128),
+			array('sdnPublishDate', 'length', 'max'=>100),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, person, organization, person_position, person_function, date_created, status, maker, supervisor', 'safe', 'on'=>'search'),
+			array('sdnUpdateCheckUid, sdnUpdateCheckDate, sdnPublishDate', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -60,15 +52,9 @@ class TPersonEmployment extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'id' => 'ID',
-			'person' => 'Person',
-			'organization' => 'Organization',
-			'person_position' => 'Person Position',
-			'person_function' => 'Person Function',
-			'date_created' => 'Date Created',
-			'status' => 'Status',
-			'maker' => 'Maker',
-			'supervisor' => 'Supervisor',
+			'sdnUpdateCheckUid' => 'Sdn Update Check Uid',
+			'sdnUpdateCheckDate' => 'Sdn Update Check Date',
+			'sdnPublishDate' => 'Sdn Publish Date',
 		);
 	}
 
@@ -90,15 +76,9 @@ class TPersonEmployment extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('id',$this->id);
-		$criteria->compare('person',$this->person,true);
-		$criteria->compare('organization',$this->organization);
-		$criteria->compare('person_position',$this->person_position);
-		$criteria->compare('person_function',$this->person_function);
-		$criteria->compare('date_created',$this->date_created,true);
-		$criteria->compare('status',$this->status,true);
-		$criteria->compare('maker',$this->maker,true);
-		$criteria->compare('supervisor',$this->supervisor,true);
+		$criteria->compare('sdnUpdateCheckUid',$this->sdnUpdateCheckUid,true);
+		$criteria->compare('sdnUpdateCheckDate',$this->sdnUpdateCheckDate,true);
+		$criteria->compare('sdnPublishDate',$this->sdnPublishDate,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -109,7 +89,7 @@ class TPersonEmployment extends CActiveRecord
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!
 	 * @param string $className active record class name.
-	 * @return TPersonEmployment the static model class
+	 * @return TSdnupdatecheck the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{

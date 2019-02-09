@@ -25339,3 +25339,339 @@ Stack trace:
 REQUEST_URI=/astute/index.php?r=collections/people/politicallyExposed/view&id=rf5tOShLXMzae7dfKXbUQLlRxDXCC1gcoed3OnfmOj8
 HTTP_REFERER=http://localhost/astute/index.php?r=collections/people/politicallyExposed
 ---
+2019/01/31 08:13:40 [error] [exception.CDbException] CDbException: CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+ in C:\xampp\htdocs\astute\framework\db\CDbConnection.php:399
+Stack trace:
+#0 C:\xampp\htdocs\astute\framework\db\CDbConnection.php(347): CDbConnection->open()
+#1 C:\xampp\htdocs\astute\framework\db\CDbConnection.php(325): CDbConnection->setActive(true)
+#2 C:\xampp\htdocs\astute\framework\base\CModule.php(394): CDbConnection->init()
+#3 C:\xampp\htdocs\astute\framework\base\CApplication.php(459): CModule->getComponent('db')
+#4 C:\xampp\htdocs\astute\framework\db\ar\CActiveRecord.php(639): CApplication->getDb()
+#5 C:\xampp\htdocs\astute\framework\db\ar\CActiveRecord.php(1436): CActiveRecord->getDbConnection()
+#6 C:\xampp\htdocs\astute\framework\db\ar\CActiveRecord.php(1525): CActiveRecord->getTableAlias(true)
+#7 C:\xampp\htdocs\astute\protected\components\UserIdentity.php(24): CActiveRecord->findByAttributes(Array)
+#8 C:\xampp\htdocs\astute\protected\models\LoginForm.php(54): UserIdentity->authenticate()
+#9 C:\xampp\htdocs\astute\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#10 C:\xampp\htdocs\astute\framework\validators\CValidator.php(201): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#11 C:\xampp\htdocs\astute\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), Array)
+#12 C:\xampp\htdocs\astute\protected\controllers\UserController.php(184): CModel->validate()
+#13 C:\xampp\htdocs\astute\framework\web\actions\CInlineAction.php(49): UserController->actionLogin()
+#14 C:\xampp\htdocs\astute\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#15 C:\xampp\htdocs\astute\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#16 C:\xampp\htdocs\astute\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 C:\xampp\htdocs\astute\framework\web\CWebApplication.php(282): CController->run('login')
+#18 C:\xampp\htdocs\astute\framework\web\CWebApplication.php(141): CWebApplication->runController('user/login')
+#19 C:\xampp\htdocs\astute\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#20 C:\xampp\htdocs\astute\index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/astute/index.php?r=user/login
+HTTP_REFERER=http://localhost/astute/index.php?r=user/login
+---
+2019/01/31 09:13:55 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'astute-server.t_registrationtypes' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `t_registrationtypes`.
+in C:\xampp\htdocs\astute\protected\views\licences\licencesClient\index.php (84)
+in C:\xampp\htdocs\astute\protected\controllers\licences\LicencesClientController.php (41)
+in C:\xampp\htdocs\astute\index.php (13)
+2019/01/31 09:13:55 [error] [exception.CDbException] CDbException: The table "t_registrationtypes" for active record class "TRegistrationtypes" cannot be found in the database. in C:\xampp\htdocs\astute\framework\db\ar\CActiveRecord.php:2390
+Stack trace:
+#0 C:\xampp\htdocs\astute\framework\db\ar\CActiveRecord.php(413): CActiveRecordMetaData->__construct(Object(TRegistrationtypes))
+#1 C:\xampp\htdocs\astute\framework\db\ar\CActiveRecord.php(663): CActiveRecord->getMetaData()
+#2 C:\xampp\htdocs\astute\framework\db\ar\CActiveRecord.php(1493): CActiveRecord->getTableSchema()
+#3 C:\xampp\htdocs\astute\protected\views\licences\licencesClient\index.php(84): CActiveRecord->findByPk('2')
+#4 C:\xampp\htdocs\astute\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\astute\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#6 C:\xampp\htdocs\astute\framework\web\CController.php(872): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#7 C:\xampp\htdocs\astute\framework\web\CController.php(785): CController->renderPartial('index', Array, true)
+#8 C:\xampp\htdocs\astute\protected\controllers\licences\LicencesClientController.php(41): CController->render('index', Array)
+#9 C:\xampp\htdocs\astute\framework\web\actions\CInlineAction.php(49): LicencesClientController->actionIndex()
+#10 C:\xampp\htdocs\astute\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\xampp\htdocs\astute\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#12 C:\xampp\htdocs\astute\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\xampp\htdocs\astute\framework\web\CWebApplication.php(282): CController->run('')
+#14 C:\xampp\htdocs\astute\framework\web\CWebApplication.php(141): CWebApplication->runController('licences/licenc...')
+#15 C:\xampp\htdocs\astute\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#16 C:\xampp\htdocs\astute\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/astute/index.php?r=licences/licencesClient
+HTTP_REFERER=http://localhost/astute/index.php?r=collections/organisation/organizations/view&id=3F5koq-7YD8bhXJ0gRNDQQ
+---
+2019/02/01 10:52:42 [error] [php] Undefined variable: people1 (C:\xampp\htdocs\astute\protected\views\collections\people\politicallyExposed\index.php:26)
+Stack trace:
+#0 C:\xampp\htdocs\astute\framework\web\CController.php(872): PoliticallyExposedController->renderFile()
+#1 C:\xampp\htdocs\astute\framework\web\CController.php(785): PoliticallyExposedController->renderPartial()
+#2 C:\xampp\htdocs\astute\protected\controllers\collections\people\PoliticallyExposedController.php(39): PoliticallyExposedController->render()
+#3 C:\xampp\htdocs\astute\framework\web\actions\CInlineAction.php(49): PoliticallyExposedController->actionIndex()
+#4 C:\xampp\htdocs\astute\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\astute\framework\web\CController.php(286): PoliticallyExposedController->runAction()
+#6 C:\xampp\htdocs\astute\framework\web\CController.php(265): PoliticallyExposedController->runActionWithFilters()
+#7 C:\xampp\htdocs\astute\framework\web\CWebApplication.php(282): PoliticallyExposedController->run()
+#8 C:\xampp\htdocs\astute\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\astute\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\astute\index.php(13): CWebApplication->run()
+REQUEST_URI=/astute/index.php?r=collections/people/politicallyExposed
+in C:\xampp\htdocs\astute\protected\views\collections\people\politicallyExposed\index.php (26)
+in C:\xampp\htdocs\astute\protected\controllers\collections\people\PoliticallyExposedController.php (39)
+in C:\xampp\htdocs\astute\index.php (13)
+2019/02/01 11:57:31 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\astute\protected\views\collections\people\politicallyExposed\addnewemployment.php:174)
+Stack trace:
+#0 C:\xampp\htdocs\astute\framework\web\CController.php(872): PoliticallyExposedController->renderFile()
+#1 C:\xampp\htdocs\astute\framework\web\CController.php(785): PoliticallyExposedController->renderPartial()
+#2 C:\xampp\htdocs\astute\protected\controllers\collections\people\PoliticallyExposedController.php(394): PoliticallyExposedController->render()
+#3 unknown(0): PoliticallyExposedController->actionAddnewemployment()
+#4 C:\xampp\htdocs\astute\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs()
+#5 C:\xampp\htdocs\astute\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 C:\xampp\htdocs\astute\framework\web\CController.php(308): CInlineAction->runWithParams()
+#7 C:\xampp\htdocs\astute\framework\web\CController.php(286): PoliticallyExposedController->runAction()
+#8 C:\xampp\htdocs\astute\framework\web\CController.php(265): PoliticallyExposedController->runActionWithFilters()
+#9 C:\xampp\htdocs\astute\framework\web\CWebApplication.php(282): PoliticallyExposedController->run()
+#10 C:\xampp\htdocs\astute\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 C:\xampp\htdocs\astute\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\astute\index.php(13): CWebApplication->run()
+REQUEST_URI=/astute/index.php?r=collections/people/politicallyExposed/addnewemployment&id=zTkAb736dvstIl4t1j4EVw&per=a0gXFhgki-pMzXWdMP7EmBaG8kc1EgFT005t5qi6smo
+in C:\xampp\htdocs\astute\protected\views\collections\people\politicallyExposed\addnewemployment.php (174)
+in C:\xampp\htdocs\astute\protected\controllers\collections\people\PoliticallyExposedController.php (394)
+in C:\xampp\htdocs\astute\index.php (13)
+2019/02/05 14:53:12 [error] [exception.CException] CException: Property "CWebUser.userid" is not defined. in C:\xampp\htdocs\astute\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\astute\framework\web\auth\CWebUser.php(146): CComponent->__get('userid')
+#1 C:\xampp\htdocs\astute\protected\controllers\collections\people\PoliticallyExposedController.php(101): CWebUser->__get('userid')
+#2 [internal function]: PoliticallyExposedController->actionView('a0gXFhgki-pMzXW...')
+#3 C:\xampp\htdocs\astute\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(PoliticallyExposedController), Array)
+#4 C:\xampp\htdocs\astute\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(PoliticallyExposedController), Object(ReflectionMethod), Array)
+#5 C:\xampp\htdocs\astute\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\astute\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#7 C:\xampp\htdocs\astute\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\astute\framework\web\CWebApplication.php(282): CController->run('view')
+#9 C:\xampp\htdocs\astute\framework\web\CWebApplication.php(141): CWebApplication->runController('collections/peo...')
+#10 C:\xampp\htdocs\astute\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\astute\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/astute/index.php?r=collections/people/politicallyExposed/view&id=a0gXFhgki-pMzXWdMP7EmBaG8kc1EgFT005t5qi6smo
+HTTP_REFERER=http://localhost/astute/index.php?r=collections/people/politicallyExposed/view&id=a0gXFhgki-pMzXWdMP7EmBaG8kc1EgFT005t5qi6smo
+---
+2019/02/06 07:57:01 [error] [exception.CException] CException: Property "CWebUser.userid" is not defined. in C:\xampp\htdocs\astute\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\astute\framework\web\auth\CWebUser.php(146): CComponent->__get('userid')
+#1 C:\xampp\htdocs\astute\protected\controllers\collections\people\PoliticallyExposedController.php(101): CWebUser->__get('userid')
+#2 [internal function]: PoliticallyExposedController->actionView('a0gXFhgki-pMzXW...')
+#3 C:\xampp\htdocs\astute\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(PoliticallyExposedController), Array)
+#4 C:\xampp\htdocs\astute\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(PoliticallyExposedController), Object(ReflectionMethod), Array)
+#5 C:\xampp\htdocs\astute\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\astute\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#7 C:\xampp\htdocs\astute\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\astute\framework\web\CWebApplication.php(282): CController->run('view')
+#9 C:\xampp\htdocs\astute\framework\web\CWebApplication.php(141): CWebApplication->runController('collections/peo...')
+#10 C:\xampp\htdocs\astute\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\astute\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/astute/index.php?r=collections/people/politicallyExposed/view&id=a0gXFhgki-pMzXWdMP7EmBaG8kc1EgFT005t5qi6smo
+HTTP_REFERER=http://localhost/astute/index.php?r=collections/people/politicallyExposed
+---
+2019/02/08 09:18:59 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "site/login". in C:\xampp\htdocs\astute\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\astute\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#1 C:\xampp\htdocs\astute\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\astute\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/astute/index.php?r=site/login
+HTTP_REFERER=http://localhost/astute/index.php?r=collections/people/politicallyExposed/view&id=l2UTPBt-RSaIiA8DqdvNV9iEIegRoX-oFFXd00p8cfM
+---
+2019/02/08 09:19:04 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "site/login". in C:\xampp\htdocs\astute\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\astute\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#1 C:\xampp\htdocs\astute\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\astute\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/astute/index.php?r=site/login
+---
+2019/02/08 09:19:07 [error] [exception.CException] CException: Property "CWebUser.userid" is not defined. in C:\xampp\htdocs\astute\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\astute\framework\web\auth\CWebUser.php(146): CComponent->__get('userid')
+#1 C:\xampp\htdocs\astute\protected\controllers\collections\people\PoliticallyExposedController.php(101): CWebUser->__get('userid')
+#2 [internal function]: PoliticallyExposedController->actionView('l2UTPBt-RSaIiA8...')
+#3 C:\xampp\htdocs\astute\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(PoliticallyExposedController), Array)
+#4 C:\xampp\htdocs\astute\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(PoliticallyExposedController), Object(ReflectionMethod), Array)
+#5 C:\xampp\htdocs\astute\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\astute\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#7 C:\xampp\htdocs\astute\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\astute\framework\web\CWebApplication.php(282): CController->run('view')
+#9 C:\xampp\htdocs\astute\framework\web\CWebApplication.php(141): CWebApplication->runController('collections/peo...')
+#10 C:\xampp\htdocs\astute\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\astute\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/astute/index.php?r=collections/people/politicallyExposed/view&id=l2UTPBt-RSaIiA8DqdvNV9iEIegRoX-oFFXd00p8cfM
+HTTP_REFERER=http://localhost/astute/index.php?r=collections/people/politicallyExposed
+---
+2019/02/08 09:19:48 [error] [exception.CException] CException: PanelController cannot find the requested view "adversemediaprogram". in C:\xampp\htdocs\astute\framework\web\CController.php:881
+Stack trace:
+#0 C:\xampp\htdocs\astute\framework\web\CController.php(785): CController->renderPartial('adversemediapro...', Array, true)
+#1 C:\xampp\htdocs\astute\protected\controllers\settings\PanelController.php(169): CController->render('adversemediapro...', Array)
+#2 C:\xampp\htdocs\astute\framework\web\actions\CInlineAction.php(49): PanelController->actionAdverseMediaProgram()
+#3 C:\xampp\htdocs\astute\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\astute\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\astute\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#6 C:\xampp\htdocs\astute\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#7 C:\xampp\htdocs\astute\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 C:\xampp\htdocs\astute\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#9 C:\xampp\htdocs\astute\framework\web\CController.php(291): CFilterChain->run()
+#10 C:\xampp\htdocs\astute\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\xampp\htdocs\astute\framework\web\CWebApplication.php(282): CController->run('adversemediapro...')
+#12 C:\xampp\htdocs\astute\framework\web\CWebApplication.php(141): CWebApplication->runController('settings/panel/...')
+#13 C:\xampp\htdocs\astute\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#14 C:\xampp\htdocs\astute\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/astute/index.php?r=settings/panel/adversemediaprogram
+HTTP_REFERER=http://localhost/astute/index.php?r=settings/panel
+---
+2019/02/08 11:31:47 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\astute\protected\views\settings\panel\adversemediaprogram.php:72)
+Stack trace:
+#0 C:\xampp\htdocs\astute\framework\web\CController.php(872): PanelController->renderFile()
+#1 C:\xampp\htdocs\astute\framework\web\CController.php(785): PanelController->renderPartial()
+#2 C:\xampp\htdocs\astute\protected\controllers\settings\PanelController.php(169): PanelController->render()
+#3 C:\xampp\htdocs\astute\framework\web\actions\CInlineAction.php(49): PanelController->actionAdverseMediaProgram()
+#4 C:\xampp\htdocs\astute\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\astute\framework\web\filters\CFilterChain.php(134): PanelController->runAction()
+#6 C:\xampp\htdocs\astute\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\astute\framework\web\CController.php(1148): CAccessControlFilter->filter()
+#8 C:\xampp\htdocs\astute\framework\web\filters\CInlineFilter.php(58): PanelController->filterAccessControl()
+#9 C:\xampp\htdocs\astute\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#10 C:\xampp\htdocs\astute\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\astute\framework\web\CController.php(265): PanelController->runActionWithFilters()
+#12 C:\xampp\htdocs\astute\framework\web\CWebApplication.php(282): PanelController->run()
+#13 C:\xampp\htdocs\astute\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\xampp\htdocs\astute\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\astute\index.php(13): CWebApplication->run()
+REQUEST_URI=/astute/index.php?r=settings/panel/adversemediaprogram
+in C:\xampp\htdocs\astute\protected\views\settings\panel\adversemediaprogram.php (72)
+in C:\xampp\htdocs\astute\protected\controllers\settings\PanelController.php (169)
+in C:\xampp\htdocs\astute\index.php (13)
+2019/02/08 13:29:01 [error] [exception.CException] CException: Property "CWebUser.userid" is not defined. in C:\xampp\htdocs\astute\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\astute\framework\web\auth\CWebUser.php(146): CComponent->__get('userid')
+#1 C:\xampp\htdocs\astute\protected\controllers\people\PoliticallyExposedController.php(453): CWebUser->__get('userid')
+#2 [internal function]: PoliticallyExposedController->actionSearchPerson('O4M9J_rrhWAtP6Q...')
+#3 C:\xampp\htdocs\astute\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(PoliticallyExposedController), Array)
+#4 C:\xampp\htdocs\astute\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(PoliticallyExposedController), Object(ReflectionMethod), Array)
+#5 C:\xampp\htdocs\astute\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\astute\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#7 C:\xampp\htdocs\astute\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\astute\framework\web\CWebApplication.php(282): CController->run('searchperson')
+#9 C:\xampp\htdocs\astute\framework\web\CWebApplication.php(141): CWebApplication->runController('people/politica...')
+#10 C:\xampp\htdocs\astute\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\astute\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/astute/index.php?r=people/politicallyexposed/searchperson&id=O4M9J_rrhWAtP6QF6ujc6A
+HTTP_REFERER=http://localhost/astute/index.php?r=people/politicallyExposed/view&id=Ugwy62MUeKw_IxErAetPFCW5iR6OQB-Uf6K1lwD-LzE
+---
+2019/02/08 13:50:04 [error] [exception.CException] CException: Property "CWebUser.userid" is not defined. in C:\xampp\htdocs\astute\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\astute\framework\web\auth\CWebUser.php(146): CComponent->__get('userid')
+#1 C:\xampp\htdocs\astute\protected\controllers\people\PoliticallyExposedController.php(101): CWebUser->__get('userid')
+#2 [internal function]: PoliticallyExposedController->actionView('Ugwy62MUeKw_IxE...')
+#3 C:\xampp\htdocs\astute\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(PoliticallyExposedController), Array)
+#4 C:\xampp\htdocs\astute\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(PoliticallyExposedController), Object(ReflectionMethod), Array)
+#5 C:\xampp\htdocs\astute\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\astute\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#7 C:\xampp\htdocs\astute\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\astute\framework\web\CWebApplication.php(282): CController->run('view')
+#9 C:\xampp\htdocs\astute\framework\web\CWebApplication.php(141): CWebApplication->runController('people/politica...')
+#10 C:\xampp\htdocs\astute\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\astute\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/astute/index.php?r=people/politicallyExposed/view&id=Ugwy62MUeKw_IxErAetPFCW5iR6OQB-Uf6K1lwD-LzE
+HTTP_REFERER=http://localhost/astute/index.php?r=people/politicallyExposed/view&id=Ugwy62MUeKw_IxErAetPFCW5iR6OQB-Uf6K1lwD-LzE
+---
+2019/02/09 09:38:09 [error] [php] Undefined variable: checkadverseperson (C:\xampp\htdocs\astute\protected\views\media\adverseMedia\view.php:95)
+Stack trace:
+#0 C:\xampp\htdocs\astute\framework\web\CController.php(872): AdverseMediaController->renderFile()
+#1 C:\xampp\htdocs\astute\framework\web\CController.php(785): AdverseMediaController->renderPartial()
+#2 C:\xampp\htdocs\astute\protected\controllers\media\AdverseMediaController.php(229): AdverseMediaController->render()
+#3 unknown(0): AdverseMediaController->actionView()
+#4 C:\xampp\htdocs\astute\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs()
+#5 C:\xampp\htdocs\astute\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 C:\xampp\htdocs\astute\framework\web\CController.php(308): CInlineAction->runWithParams()
+#7 C:\xampp\htdocs\astute\framework\web\CController.php(286): AdverseMediaController->runAction()
+#8 C:\xampp\htdocs\astute\framework\web\CController.php(265): AdverseMediaController->runActionWithFilters()
+#9 C:\xampp\htdocs\astute\framework\web\CWebApplication.php(282): AdverseMediaController->run()
+#10 C:\xampp\htdocs\astute\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 C:\xampp\htdocs\astute\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\astute\index.php(13): CWebApplication->run()
+REQUEST_URI=/astute/index.php?r=media/adverseMedia/view&id=y4BfxK79Jm1yL2vdP3L_Hg
+in C:\xampp\htdocs\astute\protected\views\media\adverseMedia\view.php (95)
+in C:\xampp\htdocs\astute\protected\controllers\media\AdverseMediaController.php (229)
+in C:\xampp\htdocs\astute\index.php (13)
+2019/02/09 09:41:32 [error] [php] Undefined variable: checkadverseperson (C:\xampp\htdocs\astute\protected\views\media\adverseMedia\view.php:95)
+Stack trace:
+#0 C:\xampp\htdocs\astute\framework\web\CController.php(872): AdverseMediaController->renderFile()
+#1 C:\xampp\htdocs\astute\framework\web\CController.php(785): AdverseMediaController->renderPartial()
+#2 C:\xampp\htdocs\astute\protected\controllers\media\AdverseMediaController.php(229): AdverseMediaController->render()
+#3 unknown(0): AdverseMediaController->actionView()
+#4 C:\xampp\htdocs\astute\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs()
+#5 C:\xampp\htdocs\astute\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 C:\xampp\htdocs\astute\framework\web\CController.php(308): CInlineAction->runWithParams()
+#7 C:\xampp\htdocs\astute\framework\web\CController.php(286): AdverseMediaController->runAction()
+#8 C:\xampp\htdocs\astute\framework\web\CController.php(265): AdverseMediaController->runActionWithFilters()
+#9 C:\xampp\htdocs\astute\framework\web\CWebApplication.php(282): AdverseMediaController->run()
+#10 C:\xampp\htdocs\astute\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 C:\xampp\htdocs\astute\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\astute\index.php(13): CWebApplication->run()
+REQUEST_URI=/astute/index.php?r=media/adverseMedia/view&id=y4BfxK79Jm1yL2vdP3L_Hg
+in C:\xampp\htdocs\astute\protected\views\media\adverseMedia\view.php (95)
+in C:\xampp\htdocs\astute\protected\controllers\media\AdverseMediaController.php (229)
+in C:\xampp\htdocs\astute\index.php (13)
+2019/02/09 09:54:41 [error] [php] Undefined variable: checkadverseperson (C:\xampp\htdocs\astute\protected\views\media\adverseMedia\view.php:95)
+Stack trace:
+#0 C:\xampp\htdocs\astute\framework\web\CController.php(872): AdverseMediaController->renderFile()
+#1 C:\xampp\htdocs\astute\framework\web\CController.php(785): AdverseMediaController->renderPartial()
+#2 C:\xampp\htdocs\astute\protected\controllers\media\AdverseMediaController.php(229): AdverseMediaController->render()
+#3 unknown(0): AdverseMediaController->actionView()
+#4 C:\xampp\htdocs\astute\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs()
+#5 C:\xampp\htdocs\astute\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 C:\xampp\htdocs\astute\framework\web\CController.php(308): CInlineAction->runWithParams()
+#7 C:\xampp\htdocs\astute\framework\web\CController.php(286): AdverseMediaController->runAction()
+#8 C:\xampp\htdocs\astute\framework\web\CController.php(265): AdverseMediaController->runActionWithFilters()
+#9 C:\xampp\htdocs\astute\framework\web\CWebApplication.php(282): AdverseMediaController->run()
+#10 C:\xampp\htdocs\astute\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 C:\xampp\htdocs\astute\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\astute\index.php(13): CWebApplication->run()
+REQUEST_URI=/astute/index.php?r=media/adverseMedia/view&id=y4BfxK79Jm1yL2vdP3L_Hg
+in C:\xampp\htdocs\astute\protected\views\media\adverseMedia\view.php (95)
+in C:\xampp\htdocs\astute\protected\controllers\media\AdverseMediaController.php (229)
+in C:\xampp\htdocs\astute\index.php (13)
+2019/02/09 10:10:56 [error] [php] Undefined variable: checkadverseperson (C:\xampp\htdocs\astute\protected\views\media\adverseMedia\view.php:95)
+Stack trace:
+#0 C:\xampp\htdocs\astute\framework\web\CController.php(872): AdverseMediaController->renderFile()
+#1 C:\xampp\htdocs\astute\framework\web\CController.php(785): AdverseMediaController->renderPartial()
+#2 C:\xampp\htdocs\astute\protected\controllers\media\AdverseMediaController.php(229): AdverseMediaController->render()
+#3 unknown(0): AdverseMediaController->actionView()
+#4 C:\xampp\htdocs\astute\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs()
+#5 C:\xampp\htdocs\astute\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 C:\xampp\htdocs\astute\framework\web\CController.php(308): CInlineAction->runWithParams()
+#7 C:\xampp\htdocs\astute\framework\web\CController.php(286): AdverseMediaController->runAction()
+#8 C:\xampp\htdocs\astute\framework\web\CController.php(265): AdverseMediaController->runActionWithFilters()
+#9 C:\xampp\htdocs\astute\framework\web\CWebApplication.php(282): AdverseMediaController->run()
+#10 C:\xampp\htdocs\astute\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 C:\xampp\htdocs\astute\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\astute\index.php(13): CWebApplication->run()
+REQUEST_URI=/astute/index.php?r=media/adverseMedia/view&id=y4BfxK79Jm1yL2vdP3L_Hg
+in C:\xampp\htdocs\astute\protected\views\media\adverseMedia\view.php (95)
+in C:\xampp\htdocs\astute\protected\controllers\media\AdverseMediaController.php (229)
+in C:\xampp\htdocs\astute\index.php (13)
+2019/02/09 10:10:56 [error] [php] Undefined variable: checkadverseperson (C:\xampp\htdocs\astute\protected\views\media\adverseMedia\view.php:95)
+Stack trace:
+#0 C:\xampp\htdocs\astute\framework\web\CController.php(872): AdverseMediaController->renderFile()
+#1 C:\xampp\htdocs\astute\framework\web\CController.php(785): AdverseMediaController->renderPartial()
+#2 C:\xampp\htdocs\astute\protected\controllers\media\AdverseMediaController.php(229): AdverseMediaController->render()
+#3 unknown(0): AdverseMediaController->actionView()
+#4 C:\xampp\htdocs\astute\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs()
+#5 C:\xampp\htdocs\astute\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 C:\xampp\htdocs\astute\framework\web\CController.php(308): CInlineAction->runWithParams()
+#7 C:\xampp\htdocs\astute\framework\web\CController.php(286): AdverseMediaController->runAction()
+#8 C:\xampp\htdocs\astute\framework\web\CController.php(265): AdverseMediaController->runActionWithFilters()
+#9 C:\xampp\htdocs\astute\framework\web\CWebApplication.php(282): AdverseMediaController->run()
+#10 C:\xampp\htdocs\astute\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 C:\xampp\htdocs\astute\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\astute\index.php(13): CWebApplication->run()
+REQUEST_URI=/astute/index.php?r=media/adverseMedia/view&id=y4BfxK79Jm1yL2vdP3L_Hg
+in C:\xampp\htdocs\astute\protected\views\media\adverseMedia\view.php (95)
+in C:\xampp\htdocs\astute\protected\controllers\media\AdverseMediaController.php (229)
+in C:\xampp\htdocs\astute\index.php (13)

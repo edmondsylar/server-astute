@@ -40,7 +40,7 @@ class PoliticallyExposedController extends Controller {
         ));
     }
 
-    //load person
+    //load organization
     public function loadModel() {
         $userid = Yii::app()->user->userid;
 //        $people = TPerson::model()->findAll("status IN ('A','D')");
@@ -49,7 +49,7 @@ class PoliticallyExposedController extends Controller {
         $people = TPerson::model()->findAll(array(
             'condition' => "status IN ('D','M')",
             'order' => 'id DESC',
-           'limit' => '50',
+            'limit' => '30',
         ));
 
         return $model = array($people);
@@ -78,7 +78,7 @@ class PoliticallyExposedController extends Controller {
             } else {
                 //log error
             }
-            $this->redirect(array('collections/people/politicallyExposed'));
+            $this->redirect(array('people/politicallyExposed'));
         }
         $this->render('search', array(
             'model' => $this->loadSearchResult($userid, $query),
@@ -103,7 +103,7 @@ class PoliticallyExposedController extends Controller {
         $code = new Encryption;
         $person = $code->decode($id);
 
-		//edit person
+//		//edit person
         if (isset($_POST['edit-name-person'])) {
             $personidedt = $_POST['personidedit'];
             $model = TPerson::model()->findByAttributes(array('person_id' => $personidedt));
@@ -116,7 +116,7 @@ class PoliticallyExposedController extends Controller {
             } else {
                 //log error
             }
-            $this->redirect(array('collections/people/politicallyExposed/view', 'id' => $id));
+            $this->redirect(array('people/politicallyExposed/view', 'id' => $id));
         }
         //add image url
         if (isset($_POST['new-picture-url'])) {
@@ -147,8 +147,9 @@ class PoliticallyExposedController extends Controller {
             } else {
                 //log error
             }
-            $this->redirect(array('collections/people/politicallyExposed/view', 'id' => $id));
+            $this->redirect(array('people/politicallyExposed/view', 'id' => $id));
         }
+
         // save image path to database
 //        if (isset($_POST['new-picture-url'])){
 //            $model = new TPersonphoto();
@@ -165,19 +166,19 @@ class PoliticallyExposedController extends Controller {
 //            $this->redirect(array('people/politicallyExposed/view', 'id' => $id));
 //        }
 
+
         //edit image url
         if (isset($_POST['edit-new-picture-url'])) {
             $pictureid = $_POST['pictureid'];
             $model = TPersonPhotoUrl::model()->findByPk($pictureid);
             $model->url = $_POST['edit-new-picture-url'];
 
-
             if ($model->update()) {
                 //log success
             } else {
                 //log error
             }
-            $this->redirect(array('collections/people/politicallyExposed/view', 'id' => $id));
+            $this->redirect(array('people/politicallyExposed/view', 'id' => $id));
         }
         //add website citation
         if (isset($_POST['new-title-citation'])) {
@@ -197,7 +198,7 @@ class PoliticallyExposedController extends Controller {
             } else {
                 //log error
             }
-            $this->redirect(array('collections/people/politicallyExposed/view', 'id' => $id));
+            $this->redirect(array('people/politicallyExposed/view', 'id' => $id));
         }
         //edit website citation
         if (isset($_POST['edit-title-citation'])) {
@@ -215,7 +216,7 @@ class PoliticallyExposedController extends Controller {
             } else {
                 //log error
             }
-            $this->redirect(array('collections/people/politicallyExposed/view', 'id' => $id));
+            $this->redirect(array('people/politicallyExposed/view', 'id' => $id));
         }
         //delete reference
         if (isset($_POST['reference_delete_id'])) {
@@ -227,7 +228,7 @@ class PoliticallyExposedController extends Controller {
             } else {
                 //log error
             }
-            $this->redirect(array('collections/people/politicallyExposed/view', 'id' => $id));
+            $this->redirect(array('people/politicallyExposed/view', 'id' => $id));
         }
         //delete employment
         if (isset($_POST['employment_delete_id'])) {
@@ -239,7 +240,7 @@ class PoliticallyExposedController extends Controller {
             } else {
                 //log error
             }
-            $this->redirect(array('collections/people/politicallyExposed/view', 'id' => $id));
+            $this->redirect(array('people/politicallyExposed/view', 'id' => $id));
         }
 //        searching for organisations to add employment
         if (isset($_POST['orgquery'])) {
@@ -258,7 +259,7 @@ class PoliticallyExposedController extends Controller {
                     //log error
                 }
             }
-//            get all newly added functions of organisation
+           //get all newly added functions of organisation
             $model1 = TPersonPhotoUrl::model()->findAllByAttributes(array('person' => $person_id, 'status' => 'D', 'maker' => $userid));
             foreach ($model1 as $record) {
                 $record->status = 'A';
@@ -287,7 +288,7 @@ class PoliticallyExposedController extends Controller {
                     //log error
                 }
             }
-            $this->redirect(array('collections/people/politicallyExposed'));
+            $this->redirect(array('people/politicallyExposed'));
         }
         //add date of birth
         if (isset($_POST['dateofbirth'])) {
@@ -300,7 +301,7 @@ class PoliticallyExposedController extends Controller {
             } else {
                 //log error
             }
-            $this->redirect(array('collections/people/politicallyExposed/view', 'id' => $id));
+            $this->redirect(array('people/politicallyExposed/view', 'id' => $id));
         }
         //edit date of birth
         if (isset($_POST['new_dateofbirth'])) {
@@ -312,7 +313,7 @@ class PoliticallyExposedController extends Controller {
             } else {
                 //log error
             }
-            $this->redirect(array('collections/people/politicallyExposed/view', 'id' => $id));
+            $this->redirect(array('people/politicallyExposed/view', 'id' => $id));
         }
         //delete date of birth
         if (isset($_POST['delete_dateofbirth'])) {
@@ -324,7 +325,7 @@ class PoliticallyExposedController extends Controller {
             } else {
                 //log error
             }
-            $this->redirect(array('collections/people/politicallyExposed/view', 'id' => $id));
+            $this->redirect(array('people/politicallyExposed/view', 'id' => $id));
         }
 
         //delete relationship
@@ -337,7 +338,7 @@ class PoliticallyExposedController extends Controller {
             } else {
                 //log error
             }
-            $this->redirect(array('collections/people/politicallyExposed/view', 'id' => $id));
+            $this->redirect(array('people/politicallyExposed/view', 'id' => $id));
         }
 
         $this->render('view', array(
@@ -345,7 +346,7 @@ class PoliticallyExposedController extends Controller {
         ));
     }
 
-    //load person 
+    //load person
     public function loadPersonModel($id, $query) {
         $code = new Encryption;
         $min_length = 2;
@@ -382,12 +383,12 @@ class PoliticallyExposedController extends Controller {
             $model->person_position = $_POST['position'];
             $model->person_function = $_POST['function'];
             $model->maker = $userid;
-            if ($model->save(false)) {
+            if ($model->save()) {
                 //log success
             } else {
                 //log error
             }
-            $this->redirect(array('collections/people/politicallyExposed/view', 'id' => $per));
+            $this->redirect(array('people/politicallyExposed/view', 'id' => $per));
         }
 
         $this->render('addnewemployment', array(
@@ -462,22 +463,21 @@ class PoliticallyExposedController extends Controller {
         if (isset($_POST['personquery'])) {
             $personquery = $_POST['personquery'];
         }
-
-        // add relationship to person
+       // add relationship to person
         if (isset($_POST['relationship_definition'])) {
-            $model = new TPersonrelationships;
+            $model = new TPersonrelationships();
             $model->person_uid1 = $_POST['person_uid1'];
             $model->relationship_id = $_POST['relationship_definition'];
             $model->person_uid2 = $_POST['person_uid2'];
             $model->maker = $userid;
-            if ($model->save()) {
+            if ($model->save(false)) {
                 //log success
             } else {
                 //log error
             }
             //re encode the person id because the url uses encoded urls
             $this->redirect(array(
-                'collections/people/politicallyExposed/view','id' => $code->encode($person_id)
+                'people/politicallyExposed/view','id' => $code->encode($person_id)
             ));
 
         }
@@ -492,13 +492,13 @@ class PoliticallyExposedController extends Controller {
             $model->gender = $_POST['new-gender'];
             $model->maker = $userid;
             $model->nationality = $_POST['new-nationality'];
-            if ($model->save()) {
+            if ($model->save(false)) {
                 //log success
             } else {
                 //log error
             }
 
-            $this->redirect(array('collections/people/politicallyExposed'));
+            $this->redirect(array('people/politicallyExposed'));
         }
 
         $this->render('searchperson', array(

@@ -1,7 +1,7 @@
 <?php
 $relationships = TRelationships::model()->findAll("status IN ('A','C')"); //getting person relationships
 $adverseprograms = TAdversemediaprograms::model()->findAll("status IN ('A','C')");
-$people1 = TPerson::model()->findAll("status IN ('A','D','C','N','M')");
+$people = TPerson::model()->findAll("status IN ('A','D','C','N','M')");
 $organizations = TOrganization::model()->findAll("status = 'D'");
 ?>
 <div class="search-header">
@@ -47,7 +47,7 @@ $organizations = TOrganization::model()->findAll("status = 'D'");
                         <div class="grey-text" style="margin-left: 10px;">
 <!--                            <li><a onmouseover="this.style.color = 'orange';"  onmouseout="this.style.color = '';" href="--><?php //echo Yii::app()->baseUrl . '/index.php?r=collections/panel/adversemediaprogram'; ?><!--"> Adverse Media Programs <span class="right blue-text">(--><?php //echo count($adverseprograms);?><!--)</span></a></li>-->
 <!--                            <li><a onmouseover="this.style.color = 'orange';"  onmouseout="this.style.color = '';" href="--><?php //echo Yii::app()->baseUrl . '/index.php?r=collections/panel/relationshipdefinition'; ?><!--"> Relationship Definitions <span class="right blue-text">(--><?php //echo count($relationships);?><!--)</span></a></li>-->
-                            <li><a onmouseover="this.style.color = 'orange';"  onmouseout="this.style.color = '';" href="<?php echo Yii::app()->baseUrl . '/index.php?r=collections/people/politicallyExposed'; ?>"> People<span class="right blue-text">(<?php echo count($people1);?>)</span></a></li>
+                            <li><a onmouseover="this.style.color = 'orange';"  onmouseout="this.style.color = '';" href="<?php echo Yii::app()->baseUrl . '/index.php?r=collections/people/politicallyExposed'; ?>"> People<span class="right blue-text">(<?php echo count($people);?>)</span></a></li>
                             <li><a onmouseover="this.style.color = 'orange';"  onmouseout="this.style.color = '';" href="<?php echo Yii::app()->baseUrl . '/index.php?r=collections/organisation/organizations'; ?>"> Organizations<span class="right blue-text">(<?php echo count($organizations);?>)</span></a></li>
 
                         </div>

@@ -55,7 +55,7 @@ class PanelController extends Controller {
             $model->name = $_POST['relationshipname'];
             $model->maker = $userid;
             //was not saving to the db but the temporary solution would be adding false in the save brackets
-            if ($model->save(true)) {
+            if ($model->save(false)) {
                 //LOG SUCCESS
             } else {
                 //LOG ERROR

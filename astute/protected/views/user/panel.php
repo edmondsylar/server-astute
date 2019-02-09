@@ -17,6 +17,7 @@ $update = TSdnfetchedinformation::model()->findAllByPk('sdnFetchedInformationUid
 $personcount = count($person);
 $organcount = count($organisation);
 $sdncount = count($sdn);
+$updatecount = count($update);
 $positioncount = count($positions);
 $positionsnamescount = count($positionsnames);
 $functionscount = count($functions);
@@ -52,7 +53,7 @@ $allowedusers = array("KD003", "WA002", "MP001", "MY004");
                                     <tr >
                                     <td style="font-size: 14px;">SDN</td>
                                     <td style="font-size: 14px;">Entry</td>
-                                    <td style="font-size: 14px;">25<?php //echo $record->noOfSdnRecordsFetched;?></td>
+                                    <td style="font-size: 14px;"><?php echo number_format($updatecount);?></td>
                                     <td style="font-size: 14px;"><?php echo number_format($sdncount); ?></td>
                                 </tr>
                                 </tbody>

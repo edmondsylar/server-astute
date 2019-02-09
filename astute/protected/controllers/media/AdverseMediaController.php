@@ -279,7 +279,7 @@ class AdverseMediaController extends Controller {
             $model->maker = $userid;
             $model->nationality = $_POST['new-nationality'];
             $model->status = 'N';
-            if ($model->save()) {
+            if ($model->save(false)) {
                 //log success
             } else {
                 //log error
@@ -318,7 +318,7 @@ class AdverseMediaController extends Controller {
             $model->person = $personid;
             $model->status = 'D';
             $model->maker = $userid;
-            if ($model->save()) {
+            if ($model->save(false)) {
                 $model1 = TPerson::model()->findByAttributes(array('person_id' => $personid));
                 $model1->status = 'M';
                 if ($model1->update()) {

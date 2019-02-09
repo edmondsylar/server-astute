@@ -1,6 +1,6 @@
 <?php
 $code = new Encryption;
-$people1 = $model[0];
+$people = $model[0];
 ?>
 <div class="search-header">
     <div class="card card-transparent no-m">
@@ -23,7 +23,7 @@ $people1 = $model[0];
                             <div class="col s12 m6 16 search-stats">                                
                                 <ul class="tabs">
                                     <li class="tab col s10" style="text-align: left">
-                                        <span class="grey-text" style="font-size: 14px;">Politically Exposed People</span>&nbsp;&nbsp;<span class="red circle white-text">&nbsp;&nbsp;<?php echo count($people1); ?>&nbsp;&nbsp;</span>
+                                        <span class="grey-text" style="font-size: 14px;">Politically Exposed People</span>&nbsp;&nbsp;<span class="red circle white-text">&nbsp;&nbsp;<?php echo count($people); ?>&nbsp;&nbsp;</span>
                                     </li>  
                                 </ul>
                             </div>
@@ -66,9 +66,9 @@ $people1 = $model[0];
                             <tfoot><tr></br></tr></tfoot>
                             <tbody>
                                 <?php
-                                if (!empty($people1)) {
+                                if (!empty($people)) {
                                     $r = 1;
-                                    foreach ($people1 as $record) {
+                                    foreach ($people as $record) {
                                         switch ($record->status) {
                                             case 'A': $status = 'Active';
                                                 $btn = 'Active';

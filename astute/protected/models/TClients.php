@@ -4,11 +4,12 @@
  * This is the model class for table "t_clients".
  *
  * The followings are the available columns in table 't_clients':
+ * @property integer $id
  * @property string $clientUuid
  * @property string $clientName
  * @property string $clientRegistrationCountry
  * @property string $clientRegistrationType
- * @property integer $clientRegistrationId
+ * @property string $clientRegistrationId
  * @property string $clientRegistrationDate
  * @property string $status
  * @property string $maker
@@ -32,13 +33,12 @@ class TClients extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('clientUuid, clientName, clientRegistrationCountry, clientRegistrationType, clientRegistrationId, clientRegistrationDate, maker', 'required'),
-			array('clientRegistrationId', 'numerical', 'integerOnly'=>true),
-			array('clientUuid, clientName, clientRegistrationCountry, clientRegistrationType', 'length', 'max'=>100),
+			array('clientUuid, clientName, clientRegistrationCountry, clientRegistrationType, clientRegistrationId', 'length', 'max'=>100),
 			array('status', 'length', 'max'=>1),
 			array('maker', 'length', 'max'=>15),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('clientUuid, clientName, clientRegistrationCountry, clientRegistrationType, clientRegistrationId, clientRegistrationDate, status, maker', 'safe', 'on'=>'search'),
+			array('id, clientUuid, clientName, clientRegistrationCountry, clientRegistrationType, clientRegistrationId, clientRegistrationDate, status, maker', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -59,6 +59,7 @@ class TClients extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
+			'id' => 'ID',
 			'clientUuid' => 'Client Uuid',
 			'clientName' => 'Client Name',
 			'clientRegistrationCountry' => 'Client Registration Country',
@@ -88,11 +89,12 @@ class TClients extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
+		$criteria->compare('id',$this->id);
 		$criteria->compare('clientUuid',$this->clientUuid,true);
 		$criteria->compare('clientName',$this->clientName,true);
 		$criteria->compare('clientRegistrationCountry',$this->clientRegistrationCountry,true);
 		$criteria->compare('clientRegistrationType',$this->clientRegistrationType,true);
-		$criteria->compare('clientRegistrationId',$this->clientRegistrationId);
+		$criteria->compare('clientRegistrationId',$this->clientRegistrationId,true);
 		$criteria->compare('clientRegistrationDate',$this->clientRegistrationDate,true);
 		$criteria->compare('status',$this->status,true);
 		$criteria->compare('maker',$this->maker,true);

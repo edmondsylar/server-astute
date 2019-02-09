@@ -22,20 +22,11 @@ $setting_array = array("settings/panel");
 $setting_status = '';
 $setting_color = '';
 
-//      collections menu
-$collection_array = array("collections/panel");
-$collection_status = '';
-$collection_color = '';
 
-//      intelligence menu
-$intelligence_array = array("intelligence/panel");
-$intelligence_status = '';
-$intelligence_color = '';
-
-//      distribution menu
-$distribution_array = array("distributions/panel");
-$distribution_status = '';
-$distribution_color = '';
+//      people menu
+$people_array = array("people/panel", "people/politicallyExposed");
+$people_status = '';
+$people_color = '';
 
 //      organisation menu
 $organisation_array = array("organisation/organizations");
@@ -52,10 +43,7 @@ $function_array = array("organisation/functions");
 $function_status = '';
 $function_color = '';
 
-//      people menu
-$people_array = array("people/panel", "people/politicallyExposed");
-$people_status = '';
-$people_color = '';
+
 
 //      media menu
 $media_array = array("media/adverseMedia");
@@ -90,20 +78,7 @@ if (in_array($controller, $dashboard_array)) {
 } elseif (in_array($controller, $setting_array)) {
     $setting_status = 'active';
     $setting_color = 'cyan-text';
-}
-elseif (in_array($controller, $collection_array)) {
-    $collection_status = 'active';
-    $collection_color = 'cyan-text';
-}
-elseif (in_array($controller, $intelligence_array)) {
-    $intelligence_status = 'active';
-    $intelligence_color = 'cyan-text';
-}
-elseif (in_array($controller, $distribution_array)) {
-    $distribution_status = 'active';
-    $distribution_color = 'cyan-text';
-}
-elseif (in_array($controller, $licence_array)) {
+} elseif (in_array($controller, $licence_array)) {
     $licence_status = 'active';
     $licence_color = 'cyan-text';
 }
@@ -117,34 +92,39 @@ elseif (in_array($controller, $licence_array)) {
     <?php echo CHtml::link('Settings', array('settings/panel'), $htmlOptions = array('class' => 'waves-effect waves-grey ' . $setting_color)); ?>
 </li>
 
-<li class="no-padding <?php echo $collection_status; ?>">
-    <?php echo CHtml::link('Collections', array('collections/panel'), $htmlOptions = array('class' => 'waves-effect waves-grey ' . $collection_color)); ?>
+<li class="no-padding <?php echo $people_status; ?>">
+    <?php if (in_array("$userid", $allowpeopleaccess)) { ?>
+        <?php echo CHtml::link('People', array('people/politicallyExposed'), $htmlOptions = array('class' => 'waves-effect waves-grey ' . $people_color)); ?>
+    <?php } else { ?>
+        <a class="grey-text"href="#">People</a>
+    <?php } ?>
 </li>
 
-<li class="no-padding <?php echo $intelligence_status; ?>">
-    <?php echo CHtml::link('Intelligence', array('intelligence/panel'), $htmlOptions = array('class' => 'waves-effect waves-grey ' . $intelligence_color)); ?>
+<li class="no-padding <?php echo $organisation_status; ?>">
+    <?php if (in_array("$userid", $alloworganizationaccess)) { ?>
+        <?php echo CHtml::link('Organizations', array('organisation/organizations'), $htmlOptions = array('class' => 'waves-effect waves-grey ' . $organisation_color)); ?>
+    <?php } else { ?>
+        <a class="grey-text"href="#">Organizations</a>
+    <?php } ?>
 </li>
 
-<li class="no-padding <?php echo $distribution_status; ?>">
-    <?php echo CHtml::link('Distribution', array('distribution/panel'), $htmlOptions = array('class' => 'waves-effect waves-grey ' . $distribution_color)); ?>
+<li class="no-padding <?php echo $media_status; ?>">
+    <?php echo CHtml::link('Media', array('media/adverseMedia'), $htmlOptions = array('class' => 'waves-effect waves-grey ' . $media_color)); ?>
 </li>
 
-<li class="no-padding <?php echo $licence_status; ?>">
-    <?php //if (in_array("$userid", $allowlicenceaccess)) {  ?>
-    <?php echo CHtml::link('Licences', array('licences/licencesClient'), $htmlOptions = array('class' => 'waves-effect waves-grey ' . $licence_color)); ?>
-    <?php // } else { ?>
+
+
+
+<!--<li class="no-padding --><?php //echo $licence_status; ?><!--">-->
+<!--    --><?php ////if (in_array("$userid", $allowlicenceaccess)) {  ?>
+<!--    --><?php //echo CHtml::link('Licences', array('licences/licencesClient'), $htmlOptions = array('class' => 'waves-effect waves-grey ' . $licence_color)); ?>
+<!--    --><?php //// } else { ?>
 <!--    <a class="grey-text"href="#">licences</a>-->
-    <?php  //}  ?>
-</li>
-
-<!--<li class="no-padding --><?php //echo $organisation_status; ?><!--">-->
-<!--    --><?php //if (in_array("$userid", $alloworganizationaccess)) { ?>
-<!--        --><?php //echo CHtml::link('Organizations', array('organisation/organizations'), $htmlOptions = array('class' => 'waves-effect waves-grey ' . $organisation_color)); ?>
-<!--    --><?php //} else { ?>
-<!--        <a class="grey-text"href="#">Organizations</a>-->
-<!--    --><?php //} ?>
+<!--    --><?php // //}  ?>
 <!--</li>-->
-
+<!---->
+<!---->
+<!---->
 <!--<li class="no-padding --><?php ////echo $function_status; ?><!--">-->
 <!--    --><?php ////if (in_array("$userid", $allowfunctionsaccess)) { ?>
 <!--        --><?php ////echo CHtml::link('Functions', array('organisation/functions'), $htmlOptions = array('class' => 'waves-effect waves-grey ' . $function_color)); ?>
@@ -152,7 +132,7 @@ elseif (in_array($controller, $licence_array)) {
 <!--        <a class="grey-text"href="#">Functions</a>-->
 <!--    --><?php ////} ?>
 <!--</li>-->
-
+<!---->
 <!--<li class="no-padding --><?php // echo $position_status;  ?><!--">-->
 <?php // if (in_array("$userid", $allowpositionsaccess)) {  ?>
 <?php // echo CHtml::link('Positions', array('organisation/positions'), $htmlOptions = array('class' => 'waves-effect waves-grey ' . $position_color)); ?>
@@ -161,18 +141,5 @@ elseif (in_array($controller, $licence_array)) {
 <?php // }  ?>
 <!--</li>-->
 
-<!--<li class="no-padding --><?php //echo $people_status; ?><!--">-->
-<!--    --><?php //if (in_array("$userid", $allowpeopleaccess)) { ?>
-<!--        --><?php //echo CHtml::link('People', array('people/politicallyExposed'), $htmlOptions = array('class' => 'waves-effect waves-grey ' . $people_color)); ?>
-<!--    --><?php //} else { ?>
-<!--        <a class="grey-text"href="#">People</a>-->
-<!--    --><?php //} ?>
-<!--</li>-->
 
-<li class="no-padding <?php //echo $media_status; ?>">
-    <?php // if (in_array("$userid", $allowpeopleaccess)) {  ?>
-    <?php //echo CHtml::link('Media', array('media/adverseMedia'), $htmlOptions = array('class' => 'waves-effect waves-grey ' . $media_color)); ?>
-    <?php // } else { ?>
-    <!--<a class="grey-text"href="#">People</a>-->
-    <?php // }  ?>
-</li>
+
