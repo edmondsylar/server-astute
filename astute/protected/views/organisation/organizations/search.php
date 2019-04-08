@@ -15,7 +15,7 @@ $searched = $model[1];
 $searchnames = TSearchname::model()->findAll("status='A'");
 
 $organizationtypes = TOrganizationtype::model()->findAll("status='A' ORDER BY name ASC");
-$countries = TCountry::model()->findAll("status='A'");
+$countries = TCountry::model()->findAll("status IN ('A','C')");
 ?>
 
 <div class="search-header">

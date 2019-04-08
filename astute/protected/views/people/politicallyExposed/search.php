@@ -13,7 +13,7 @@ $searched = $model[1];
 $searchnames = TSearchname::model()->findAll("status='A'");
 
 $persongender = TPgender::model()->findAll("status='A'");
-$countries = TCountry::model()->findAll("status='A'");
+$countries = TCountry::model()->findAll("status IN ('A','C')");
 ?>
 
 <div class="search-header">

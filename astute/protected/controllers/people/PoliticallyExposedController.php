@@ -383,7 +383,7 @@ class PoliticallyExposedController extends Controller {
             $model->person_position = $_POST['position'];
             $model->person_function = $_POST['function'];
             $model->maker = $userid;
-            if ($model->save()) {
+            if ($model->save(false)) {
                 //log success
             } else {
                 //log error
